@@ -69,7 +69,7 @@ against the source before submitting.
     Reports 3(2). https://doi.org/10.4148/2378-5977.1379
 11f. USDA National Agricultural Statistics Service, Quick Stats database - Kansas county-level
     YIELD (corn, sorghum, soybeans, winter wheat; "ALL PRODUCTION PRACTICES"), 2015-2025, accessed
-    2026-11-14 via the Quick Stats API. Used only to validate the model's water scores.
+    2026-11-14 via the Quick Stats API. Used to validate the model's weather scores and to calibrate the heat factor (21).
     https://quickstats.nass.usda.gov/ - API: https://quickstats.nass.usda.gov/api
     Notice commonly shown by NASS API users [VERIFY on quickstats.nass.usda.gov/api terms]: "This product
     uses the NASS API but is not endorsed or certified by NASS."

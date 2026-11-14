@@ -235,7 +235,7 @@ lines += ["", "Weights: the 3 suggested rotations share 100%, in proportion to t
           "* Double-crop rotation moved below the 2-year rotations because soil is not above normal or a "
           "drought alert is on (K-State MF2908 moisture guidance); its weight uses the reduced score.",
           "", "Candidates per K-State region: " + " | ".join(f"{k}: " + ", ".join(n.split(' (')[0] for n in v) for k, v in CANDIDATES.items()), "",
-          "Caveats: water only (no prices, costs, soils, irrigation, pests or residue benefits); FAO generic "
+          "Caveats: weather only (rain, water demand, heat; no prices, costs, soils, irrigation, pests or residue benefits); FAO generic "
           "crop values; storage efficiency and soil-water cap are simplified; ~55 km rain data. K-State's "
           "Tribune study found wheat-sorghum-fallow the most profitable dryland system in far-western Kansas - "
           "profit can rank rotations differently from this water score. MF2908 names double-cropping for central "
