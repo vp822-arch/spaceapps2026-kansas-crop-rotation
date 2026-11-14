@@ -101,3 +101,14 @@
 - 17_export_app_json.py: ok (1 s)
 - data through 2026-11-09; top-3: central: C-W-dSb (corn/wheat/double-crop soy) 39%, S-Sb (sorghum-soybean) 32%, C-Sb (corn-soybean) 29%; east_central: C-W-dSb (corn/wheat/double-crop soy) 41%, S-Sb (sorghum-soybean) 30%, C-Sb (corn-soybean) 29%; north_central: C-W-dSb (corn/wheat/double-crop soy) 39%, S-Sb (sorghum-soybean) 32%, C-Sb (corn-soybean) 29%; northeast: C-W-dSb (corn/wheat/double-crop soy) 41%, S-Sb (sorghum-soybean) 30%, C-Sb (corn-soybean) 29%; northwest: W-S-F (wheat-sorghum-fallow) 36%, W-C-F (wheat-corn-fallow) 33%, W-C-S-F (wheat-corn-sorghum-fallow) 31%; south_central: S-Sb (sorghum-soybean) 34%, C-W-dSb (corn/wheat/double-crop soy) 34%, C-Sb (corn-soybean) 32%; southeast: C-Sb (corn-soybean) 34%, C-W-dSb (corn/wheat/double-crop soy) 33%, S-Sb (sorghum-soybean) 33%; southwest: W-S-F (wheat-sorghum-fallow) 36%, W-C-F (wheat-corn-fallow) 33%, W-C-S-F (wheat-corn-sorghum-fallow) 31%; west_central: W-S-F (wheat-sorghum-fallow) 36%, W-C-F (wheat-corn-fallow) 33%, W-C-S-F (wheat-corn-sorghum-fallow) 31%
 - RESULT: OK - advice refreshed with data through 2026-11-09 and published to Cloudflare R2.
+
+## Run 2026-11-14 18:36  (options: --no-load --skip-download)
+- 02_clean_power.py: ok (1 s)
+- 03_normals_power.py: ok (17 s)
+- 09_usdm_labels.py: ok (1 s)
+- 11_ablation_thresholds.py: ok (1 s)
+- 13_crop_ranking.py: ok (0 s)
+- 14_rotation_ranking.py: ok (1 s)
+- 17_export_app_json.py: ok (1 s)
+- data through 2026-11-09; top-3: central: C-W-dSb (corn/wheat/double-crop soy) 39%, S-Sb (sorghum-soybean) 33%, C-Sb (corn-soybean) 28%; east_central: C-W-dSb (corn/wheat/double-crop soy) 41%, S-Sb (sorghum-soybean) 30%, C-Sb (corn-soybean) 29%; north_central: C-W-dSb (corn/wheat/double-crop soy) 39%, S-Sb (sorghum-soybean) 33%, C-Sb (corn-soybean) 28%; northeast: C-W-dSb (corn/wheat/double-crop soy) 40%, S-Sb (sorghum-soybean) 31%, C-Sb (corn-soybean) 29%; northwest: W-S-F (wheat-sorghum-fallow) 38%, W-C-F (wheat-corn-fallow) 31%, W-F (wheat-fallow) 31%; south_central: S-Sb (sorghum-soybean) 35%, C-W-dSb (corn/wheat/double-crop soy) 35%, C-Sb (corn-soybean) 30%; southeast: S-Sb (sorghum-soybean) 34%, C-W-dSb (corn/wheat/double-crop soy) 34%, C-Sb (corn-soybean) 32%; southwest: W-S-F (wheat-sorghum-fallow) 38%, W-F (wheat-fallow) 31%, W-C-F (wheat-corn-fallow) 31%; west_central: W-S-F (wheat-sorghum-fallow) 38%, W-F (wheat-fallow) 31%, W-C-F (wheat-corn-fallow) 31%
+- RESULT: OK - pipeline refreshed; Cloudflare upload skipped (--no-load).

@@ -70,6 +70,13 @@ rr = pd.read_csv(os.path.join(ROOT, "data", "rotation_ranking.csv"))
 top = rr[rr.recommended_rank <= 3]
 if top.groupby("region").size().ne(3).any() or top.region.nunique() != 9:
     problems.append("not exactly 3 recommended rotations in each of the 9 districts")
+import json as _json
+try:
+    _fc = _json.load(open(os.path.join(ROOT, "data", "factor_coefficients.json")))["crops"]
+    if set(_fc) != {"corn", "sorghum", "soybean", "wheat"}:
+        problems.append("factor_coefficients.json does not cover the 4 crops")
+except Exception as e:
+    problems.append(f"factor_coefficients.json missing or unreadable ({e})")
 cc = pd.read_csv(os.path.join(ROOT, "data", "rotation_by_current_crop.csv"))
 if cc.groupby(["region", "current_crop"]).ngroups != 36:
     problems.append("current-crop table does not cover 9 districts x 4 crops")

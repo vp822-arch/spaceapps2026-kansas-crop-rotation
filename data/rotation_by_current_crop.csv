@@ -1,76 +1,76 @@
 region,current_crop,k_state_region,rank,rotation,weight_pct,score_used,basis,note,n_shown,message
-ks_central,corn,central,1.0,C-W-dSb (corn/wheat/double-crop soy),57.0,1.115,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_central,corn,central,2.0,C-Sb (corn-soybean),43.0,0.844,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_central,sorghum,central,1.0,S-Sb (sorghum-soybean),58.0,0.906,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),42.0,0.649,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_central,soybean,central,1.0,C-W-dSb (corn/wheat/double-crop soy),39.0,1.115,normal-year water,,3,
-ks_central,soybean,central,2.0,S-Sb (sorghum-soybean),32.0,0.906,normal-year water,,3,
-ks_central,soybean,central,3.0,C-Sb (corn-soybean),29.0,0.844,normal-year water,,3,
-ks_central,wheat,central,1.0,C-W-dSb (corn/wheat/double-crop soy),63.0,1.115,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_central,wheat,central,2.0,W-S-F (wheat-sorghum-fallow),37.0,0.649,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_east_central,corn,east,1.0,C-W-dSb (corn/wheat/double-crop soy),58.0,1.341,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_east_central,corn,east,2.0,C-Sb (corn-soybean),42.0,0.96,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_east_central,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.975,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
-ks_east_central,soybean,east,1.0,C-W-dSb (corn/wheat/double-crop soy),41.0,1.341,normal-year water,,3,
-ks_east_central,soybean,east,2.0,S-Sb (sorghum-soybean),30.0,0.975,normal-year water,,3,
-ks_east_central,soybean,east,3.0,C-Sb (corn-soybean),29.0,0.96,normal-year water,,3,
-ks_east_central,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,1.341,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
-ks_north_central,corn,central,1.0,C-W-dSb (corn/wheat/double-crop soy),57.0,1.114,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_north_central,corn,central,2.0,C-Sb (corn-soybean),43.0,0.845,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_north_central,sorghum,central,1.0,S-Sb (sorghum-soybean),59.0,0.907,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_north_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),41.0,0.641,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_north_central,soybean,central,1.0,C-W-dSb (corn/wheat/double-crop soy),39.0,1.114,normal-year water,,3,
-ks_north_central,soybean,central,2.0,S-Sb (sorghum-soybean),32.0,0.907,normal-year water,,3,
-ks_north_central,soybean,central,3.0,C-Sb (corn-soybean),29.0,0.845,normal-year water,,3,
-ks_north_central,wheat,central,1.0,C-W-dSb (corn/wheat/double-crop soy),63.0,1.114,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_north_central,wheat,central,2.0,W-S-F (wheat-sorghum-fallow),37.0,0.641,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_northeast,corn,east,1.0,C-W-dSb (corn/wheat/double-crop soy),58.0,1.318,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_northeast,corn,east,2.0,C-Sb (corn-soybean),42.0,0.955,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_northeast,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.982,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
-ks_northeast,soybean,east,1.0,C-W-dSb (corn/wheat/double-crop soy),41.0,1.318,normal-year water,,3,
-ks_northeast,soybean,east,2.0,S-Sb (sorghum-soybean),30.0,0.982,normal-year water,,3,
-ks_northeast,soybean,east,3.0,C-Sb (corn-soybean),29.0,0.955,normal-year water,,3,
-ks_northeast,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,1.318,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
-ks_northwest,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.468,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_northwest,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.445,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_northwest,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),39.0,0.523,normal-year water,,3,
-ks_northwest,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),33.0,0.445,normal-year water,,3,
-ks_northwest,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.377,normal-year water,,3,
+ks_central,corn,central,1.0,C-W-dSb (corn/wheat/double-crop soy),58.0,1.016,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_central,corn,central,2.0,C-Sb (corn-soybean),42.0,0.739,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_central,sorghum,central,1.0,S-Sb (sorghum-soybean),58.0,0.846,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),42.0,0.607,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_central,soybean,central,1.0,C-W-dSb (corn/wheat/double-crop soy),39.0,1.016,normal-year water,,3,
+ks_central,soybean,central,2.0,S-Sb (sorghum-soybean),33.0,0.846,normal-year water,,3,
+ks_central,soybean,central,3.0,C-Sb (corn-soybean),28.0,0.739,normal-year water,,3,
+ks_central,wheat,central,1.0,C-W-dSb (corn/wheat/double-crop soy),63.0,1.016,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_central,wheat,central,2.0,W-S-F (wheat-sorghum-fallow),37.0,0.607,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_east_central,corn,east,1.0,C-W-dSb (corn/wheat/double-crop soy),59.0,1.265,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_east_central,corn,east,2.0,C-Sb (corn-soybean),41.0,0.883,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_east_central,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.937,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
+ks_east_central,soybean,east,1.0,C-W-dSb (corn/wheat/double-crop soy),41.0,1.265,normal-year water,,3,
+ks_east_central,soybean,east,2.0,S-Sb (sorghum-soybean),30.0,0.937,normal-year water,,3,
+ks_east_central,soybean,east,3.0,C-Sb (corn-soybean),29.0,0.883,normal-year water,,3,
+ks_east_central,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,1.265,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
+ks_north_central,corn,central,1.0,C-W-dSb (corn/wheat/double-crop soy),58.0,1.018,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_north_central,corn,central,2.0,C-Sb (corn-soybean),42.0,0.744,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_north_central,sorghum,central,1.0,S-Sb (sorghum-soybean),59.0,0.859,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_north_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),41.0,0.604,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_north_central,soybean,central,1.0,C-W-dSb (corn/wheat/double-crop soy),39.0,1.018,normal-year water,,3,
+ks_north_central,soybean,central,2.0,S-Sb (sorghum-soybean),33.0,0.859,normal-year water,,3,
+ks_north_central,soybean,central,3.0,C-Sb (corn-soybean),28.0,0.744,normal-year water,,3,
+ks_north_central,wheat,central,1.0,C-W-dSb (corn/wheat/double-crop soy),63.0,1.018,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_north_central,wheat,central,2.0,W-S-F (wheat-sorghum-fallow),37.0,0.604,normal-year water,,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_northeast,corn,east,1.0,C-W-dSb (corn/wheat/double-crop soy),59.0,1.237,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_northeast,corn,east,2.0,C-Sb (corn-soybean),41.0,0.874,normal-year water,,2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_northeast,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.938,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
+ks_northeast,soybean,east,1.0,C-W-dSb (corn/wheat/double-crop soy),40.0,1.237,normal-year water,,3,
+ks_northeast,soybean,east,2.0,S-Sb (sorghum-soybean),31.0,0.938,normal-year water,,3,
+ks_northeast,soybean,east,3.0,C-Sb (corn-soybean),29.0,0.874,normal-year water,,3,
+ks_northeast,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,1.237,normal-year water,,1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
+ks_northwest,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.408,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_northwest,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.392,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_northwest,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),40.0,0.494,normal-year water,,3,
+ks_northwest,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),32.0,0.392,normal-year water,,3,
+ks_northwest,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.344,normal-year water,,3,
 ks_northwest,soybean,west,,,,,normal-year water,,0,No K-State dryland rotation for western Kansas includes soybeans.
-ks_northwest,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),36.0,0.523,normal-year water,,3,
-ks_northwest,wheat,west,2.0,W-C-F (wheat-corn-fallow),33.0,0.468,normal-year water,,3,
-ks_northwest,wheat,west,3.0,W-C-S-F (wheat-corn-sorghum-fallow),31.0,0.445,normal-year water,,3,
-ks_south_central,corn,central,1.0,C-Sb (corn-soybean),50.0,0.798,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_south_central,corn,central,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.797,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for central Kansas include corn.
-ks_south_central,sorghum,central,1.0,S-Sb (sorghum-soybean),56.0,0.849,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_south_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),44.0,0.666,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
-ks_south_central,soybean,central,1.0,S-Sb (sorghum-soybean),34.0,0.849,dry-year water (district on watch/warning),,3,
-ks_south_central,soybean,central,2.0,C-W-dSb (corn/wheat/double-crop soy),34.0,0.848,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),3,
-ks_south_central,soybean,central,3.0,C-Sb (corn-soybean),32.0,0.798,dry-year water (district on watch/warning),,3,
-ks_south_central,wheat,central,1.0,W-S-F (wheat-sorghum-fallow),50.0,0.666,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_south_central,wheat,central,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.665,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for central Kansas include winter wheat.
-ks_southeast,corn,east,1.0,C-Sb (corn-soybean),50.0,0.979,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_southeast,corn,east,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.978,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for eastern Kansas include corn.
-ks_southeast,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.969,dry-year water (district on watch/warning),,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
-ks_southeast,soybean,east,1.0,C-Sb (corn-soybean),34.0,0.979,dry-year water (district on watch/warning),,3,
-ks_southeast,soybean,east,2.0,C-W-dSb (corn/wheat/double-crop soy),33.0,0.978,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),3,
-ks_southeast,soybean,east,3.0,S-Sb (sorghum-soybean),33.0,0.969,dry-year water (district on watch/warning),,3,
-ks_southeast,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,0.978,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
-ks_southwest,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.478,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_southwest,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.454,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_southwest,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),39.0,0.531,normal-year water,,3,
-ks_southwest,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),33.0,0.454,normal-year water,,3,
-ks_southwest,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.384,normal-year water,,3,
+ks_northwest,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),38.0,0.494,normal-year water,,3,
+ks_northwest,wheat,west,2.0,W-C-F (wheat-corn-fallow),31.0,0.408,normal-year water,,3,
+ks_northwest,wheat,west,3.0,W-F (wheat-fallow),31.0,0.401,normal-year water,,3,
+ks_south_central,corn,central,1.0,C-Sb (corn-soybean),50.0,0.65,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_south_central,corn,central,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.649,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for central Kansas include corn.
+ks_south_central,sorghum,central,1.0,S-Sb (sorghum-soybean),56.0,0.742,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_south_central,sorghum,central,2.0,W-S-F (wheat-sorghum-fallow),44.0,0.576,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include grain sorghum.
+ks_south_central,soybean,central,1.0,S-Sb (sorghum-soybean),35.0,0.742,dry-year water (district on watch/warning),,3,
+ks_south_central,soybean,central,2.0,C-W-dSb (corn/wheat/double-crop soy),35.0,0.741,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),3,
+ks_south_central,soybean,central,3.0,C-Sb (corn-soybean),30.0,0.65,dry-year water (district on watch/warning),,3,
+ks_south_central,wheat,central,1.0,W-S-F (wheat-sorghum-fallow),50.0,0.576,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_south_central,wheat,central,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.575,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for central Kansas include winter wheat.
+ks_southeast,corn,east,1.0,C-Sb (corn-soybean),50.0,0.798,dry-year water (district on watch/warning),,2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_southeast,corn,east,2.0,C-W-dSb (corn/wheat/double-crop soy),50.0,0.797,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),2,Only 2 of the K-State rotations for eastern Kansas include corn.
+ks_southeast,sorghum,east,1.0,S-Sb (sorghum-soybean),100.0,0.835,dry-year water (district on watch/warning),,1,Only 1 of the K-State rotations for eastern Kansas includes grain sorghum.
+ks_southeast,soybean,east,1.0,S-Sb (sorghum-soybean),34.0,0.835,dry-year water (district on watch/warning),,3,
+ks_southeast,soybean,east,2.0,C-W-dSb (corn/wheat/double-crop soy),34.0,0.834,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),3,
+ks_southeast,soybean,east,3.0,C-Sb (corn-soybean),32.0,0.798,dry-year water (district on watch/warning),,3,
+ks_southeast,wheat,east,1.0,C-W-dSb (corn/wheat/double-crop soy),100.0,0.834,dry-year water (district on watch/warning),double-crop moved down: soil not above normal or drought alert on (K-State MF2908),1,Only 1 of the K-State rotations for eastern Kansas includes winter wheat.
+ks_southwest,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.396,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_southwest,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.378,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_southwest,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),40.0,0.478,normal-year water,,3,
+ks_southwest,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),32.0,0.378,normal-year water,,3,
+ks_southwest,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.329,normal-year water,,3,
 ks_southwest,soybean,west,,,,,normal-year water,,0,No K-State dryland rotation for western Kansas includes soybeans.
-ks_southwest,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),36.0,0.531,normal-year water,,3,
-ks_southwest,wheat,west,2.0,W-C-F (wheat-corn-fallow),33.0,0.478,normal-year water,,3,
-ks_southwest,wheat,west,3.0,W-C-S-F (wheat-corn-sorghum-fallow),31.0,0.454,normal-year water,,3,
-ks_west_central,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.485,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_west_central,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.462,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
-ks_west_central,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),39.0,0.542,normal-year water,,3,
-ks_west_central,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),33.0,0.462,normal-year water,,3,
-ks_west_central,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.392,normal-year water,,3,
+ks_southwest,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),38.0,0.478,normal-year water,,3,
+ks_southwest,wheat,west,2.0,W-F (wheat-fallow),31.0,0.399,normal-year water,,3,
+ks_southwest,wheat,west,3.0,W-C-F (wheat-corn-fallow),31.0,0.396,normal-year water,,3,
+ks_west_central,corn,west,1.0,W-C-F (wheat-corn-fallow),51.0,0.409,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_west_central,corn,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),49.0,0.392,normal-year water,,2,Only 2 of the K-State rotations for western Kansas include corn.
+ks_west_central,sorghum,west,1.0,W-S-F (wheat-sorghum-fallow),40.0,0.499,normal-year water,,3,
+ks_west_central,sorghum,west,2.0,W-C-S-F (wheat-corn-sorghum-fallow),32.0,0.392,normal-year water,,3,
+ks_west_central,sorghum,west,3.0,S-S (continuous sorghum),28.0,0.344,normal-year water,,3,
 ks_west_central,soybean,west,,,,,normal-year water,,0,No K-State dryland rotation for western Kansas includes soybeans.
-ks_west_central,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),36.0,0.542,normal-year water,,3,
-ks_west_central,wheat,west,2.0,W-C-F (wheat-corn-fallow),33.0,0.485,normal-year water,,3,
-ks_west_central,wheat,west,3.0,W-C-S-F (wheat-corn-sorghum-fallow),31.0,0.462,normal-year water,,3,
+ks_west_central,wheat,west,1.0,W-S-F (wheat-sorghum-fallow),38.0,0.499,normal-year water,,3,
+ks_west_central,wheat,west,2.0,W-F (wheat-fallow),31.0,0.409,normal-year water,,3,
+ks_west_central,wheat,west,3.0,W-C-F (wheat-corn-fallow),31.0,0.409,normal-year water,,3,

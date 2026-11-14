@@ -1,0 +1,37 @@
+{
+ "method": "water x heat x freeze; coefficients fitted to USDA NASS county yields 2015-2025; factor kept only if leave-one-year-out within-district Spearman r improves by >= 0.01",
+ "crops": {
+  "corn": {
+   "et0_scaling": true,
+   "b_heat": 0.025,
+   "b_freeze": 0.0,
+   "oof_r_water_only": 0.462,
+   "oof_r_final": 0.527,
+   "n": 89
+  },
+  "sorghum": {
+   "et0_scaling": true,
+   "b_heat": 0.0175,
+   "b_freeze": 0.0,
+   "oof_r_water_only": 0.562,
+   "oof_r_final": 0.68,
+   "n": 84
+  },
+  "soybean": {
+   "et0_scaling": true,
+   "b_heat": 0.0,
+   "b_freeze": 0.0,
+   "oof_r_water_only": 0.648,
+   "oof_r_final": 0.72,
+   "n": 78
+  },
+  "wheat": {
+   "et0_scaling": true,
+   "b_heat": 0.0,
+   "b_freeze": 0.0,
+   "oof_r_water_only": 0.473,
+   "oof_r_final": 0.509,
+   "n": 81
+  }
+ }
+}

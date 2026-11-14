@@ -37,6 +37,15 @@ def split(name):                                          # "W-S-F (wheat-sorghu
     m = re.match(r"^(\S+)\s*\((.*)\)$", name)
     return (m.group(1), m.group(2)) if m else (name, name)
 
+def _factors():
+    """Which weather factors the ranking uses, from data/factor_coefficients.json (fitted to USDA yields)."""
+    c = json.load(open(D("factor_coefficients.json")))["crops"]
+    return {"description": "Each simulated season is scored water x heat x freeze from NASA POWER weather; "
+                           "how much heat and freeze count was fitted to USDA yields (0 = not used).",
+            "crops": {k: {"water_need_scaled_by_evapotranspiration": v["et0_scaling"],
+                          "heat_loss_per_hot_day": v["b_heat"], "freeze_loss_per_day": v["b_freeze"]}
+                      for k, v in c.items()}}
+
 def num(x, nd=3):
     return None if pd.isna(x) else round(float(x), nd)
 
@@ -79,11 +88,13 @@ for c in cmap.sort_values("county").itertuples():
 
 out = {"data_through": data_through,
        "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-       "disclaimer": ("Decision support from NASA POWER weather data and FAO crop water methods, "
-                      "not a guarantee. Based on water only (no prices, costs, soils or irrigation). "
+       "disclaimer": ("Decision support from NASA POWER weather data (rain, water demand and heat stress; freeze "
+                      "risk was tested and not needed) and FAO crop methods, not a guarantee. Weather only "
+                      "(no prices, costs, soils or irrigation). "
                       "Check with K-State Research and Extension before acting."),
        "rotation_glossary": dict(sorted(glossary.items())),
        "current_crop_options": ["corn", "sorghum", "soybean", "wheat"],
+       "score_factors": _factors(),
        "counties": counties}
 with open(D("app_rotation_advice.json"), "w") as f:
     json.dump(out, f, indent=1)

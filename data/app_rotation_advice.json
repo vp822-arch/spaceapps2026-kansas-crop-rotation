@@ -1,7 +1,7 @@
 {
  "data_through": "2026-11-09",
- "generated": "2026-11-14 23:09",
- "disclaimer": "Decision support from NASA POWER weather data and FAO crop water methods, not a guarantee. Based on water only (no prices, costs, soils or irrigation). Check with K-State Research and Extension before acting.",
+ "generated": "2026-11-14 23:37 UTC",
+ "disclaimer": "Decision support from NASA POWER weather data (rain, water demand and heat stress; freeze risk was tested and not needed) and FAO crop methods, not a guarantee. Weather only (no prices, costs, soils or irrigation). Check with K-State Research and Extension before acting.",
  "rotation_glossary": {
   "C-Sb": "corn-soybean",
   "C-W-dSb": "corn/wheat/double-crop soy",
@@ -9,6 +9,7 @@
   "S-Sb": "sorghum-soybean",
   "W-C-F": "wheat-corn-fallow",
   "W-C-S-F": "wheat-corn-sorghum-fallow",
+  "W-F": "wheat-fallow",
   "W-S-F": "wheat-sorghum-fallow"
  },
  "current_crop_options": [
@@ -17,6 +18,31 @@
   "soybean",
   "wheat"
  ],
+ "score_factors": {
+  "description": "Each simulated season is scored water x heat x freeze from NASA POWER weather; how much heat and freeze count was fitted to USDA yields (0 = not used).",
+  "crops": {
+   "corn": {
+    "water_need_scaled_by_evapotranspiration": true,
+    "heat_loss_per_hot_day": 0.025,
+    "freeze_loss_per_day": 0.0
+   },
+   "sorghum": {
+    "water_need_scaled_by_evapotranspiration": true,
+    "heat_loss_per_hot_day": 0.0175,
+    "freeze_loss_per_day": 0.0
+   },
+   "soybean": {
+    "water_need_scaled_by_evapotranspiration": true,
+    "heat_loss_per_hot_day": 0.0,
+    "freeze_loss_per_day": 0.0
+   },
+   "wheat": {
+    "water_need_scaled_by_evapotranspiration": true,
+    "heat_loss_per_hot_day": 0.0,
+    "freeze_loss_per_day": 0.0
+   }
+  }
+ },
  "counties": [
   {
    "fips": "20001",
@@ -32,32 +58,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -98,8 +124,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -107,14 +133,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -151,8 +177,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -161,8 +187,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -171,8 +197,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -184,14 +210,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -264,20 +290,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -286,8 +312,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -299,14 +325,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -330,14 +356,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -379,30 +405,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -452,21 +478,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -510,28 +536,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -543,14 +569,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -588,14 +614,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -635,32 +661,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -701,8 +727,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -710,14 +736,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -752,20 +778,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -774,8 +800,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -787,14 +813,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -818,14 +844,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -867,30 +893,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -940,21 +966,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -998,8 +1024,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -1008,8 +1034,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -1018,8 +1044,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -1031,14 +1057,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -1109,32 +1135,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -1175,8 +1201,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -1184,14 +1210,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -1224,32 +1250,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -1290,8 +1316,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -1299,14 +1325,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -1341,30 +1367,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -1395,14 +1421,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -1425,20 +1451,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -1462,30 +1488,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -1516,14 +1542,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -1546,20 +1572,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -1585,28 +1611,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -1618,14 +1644,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -1663,14 +1689,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -1714,28 +1740,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -1747,14 +1773,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -1792,14 +1818,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -1843,8 +1869,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -1853,8 +1879,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -1863,8 +1889,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -1876,14 +1902,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -1956,30 +1982,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -2029,21 +2055,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -2085,30 +2111,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -2158,21 +2184,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -2212,32 +2238,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -2278,8 +2304,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -2287,14 +2313,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -2329,30 +2355,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -2383,14 +2409,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -2413,20 +2439,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -2452,28 +2478,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -2485,14 +2511,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -2530,14 +2556,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -2579,20 +2605,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -2601,8 +2627,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -2614,14 +2640,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -2645,14 +2671,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -2696,8 +2722,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -2706,8 +2732,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -2716,8 +2742,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -2729,14 +2755,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -2809,30 +2835,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -2882,21 +2908,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -2936,32 +2962,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -3002,8 +3028,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -3011,14 +3037,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -3055,28 +3081,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -3088,14 +3114,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -3133,14 +3159,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -3184,28 +3210,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -3217,14 +3243,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -3262,14 +3288,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -3311,30 +3337,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -3365,14 +3391,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -3395,20 +3421,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -3432,30 +3458,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -3486,14 +3512,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -3516,20 +3542,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -3555,8 +3581,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -3565,8 +3591,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -3575,8 +3601,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -3588,14 +3614,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -3668,20 +3694,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -3690,8 +3716,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -3703,14 +3729,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -3734,14 +3760,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -3783,30 +3809,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -3837,14 +3863,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -3867,20 +3893,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -3904,30 +3930,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -3958,14 +3984,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -3988,20 +4014,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -4025,30 +4051,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -4079,14 +4105,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -4109,20 +4135,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -4146,30 +4172,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -4200,14 +4226,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -4230,20 +4256,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -4267,30 +4293,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -4321,14 +4347,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -4351,20 +4377,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -4386,32 +4412,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -4452,8 +4478,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -4461,14 +4487,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -4503,30 +4529,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -4557,14 +4583,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -4587,20 +4613,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -4624,30 +4650,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -4697,21 +4723,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -4753,30 +4779,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -4826,21 +4852,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -4882,30 +4908,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -4936,14 +4962,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -4966,20 +4992,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -5003,30 +5029,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -5057,14 +5083,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -5087,20 +5113,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -5124,20 +5150,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -5146,8 +5172,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -5159,14 +5185,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -5190,14 +5216,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -5239,20 +5265,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -5261,8 +5287,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -5274,14 +5300,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -5305,14 +5331,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -5356,28 +5382,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -5389,14 +5415,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -5434,14 +5460,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -5485,8 +5511,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -5495,8 +5521,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -5505,8 +5531,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -5518,14 +5544,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -5598,30 +5624,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -5652,14 +5678,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -5682,20 +5708,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -5719,30 +5745,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -5792,21 +5818,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -5848,30 +5874,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -5921,21 +5947,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -5975,32 +6001,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -6041,8 +6067,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -6050,14 +6076,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -6092,30 +6118,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -6146,14 +6172,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -6176,20 +6202,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -6213,20 +6239,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -6235,8 +6261,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -6248,14 +6274,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -6279,14 +6305,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -6330,28 +6356,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -6363,14 +6389,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -6408,14 +6434,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -6459,8 +6485,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -6469,8 +6495,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -6479,8 +6505,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -6492,14 +6518,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -6572,30 +6598,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -6626,14 +6652,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -6656,20 +6682,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -6695,8 +6721,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -6705,8 +6731,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -6715,8 +6741,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -6728,14 +6754,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -6810,28 +6836,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -6843,14 +6869,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -6888,14 +6914,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -6937,20 +6963,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -6959,8 +6985,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -6972,14 +6998,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -7003,14 +7029,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -7054,28 +7080,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -7087,14 +7113,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -7132,14 +7158,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -7181,30 +7207,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -7235,14 +7261,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -7265,20 +7291,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -7304,8 +7330,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -7314,8 +7340,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -7324,8 +7350,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -7337,14 +7363,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -7419,28 +7445,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -7452,14 +7478,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -7497,14 +7523,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -7544,32 +7570,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -7610,8 +7636,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -7619,14 +7645,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -7663,8 +7689,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -7673,8 +7699,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -7683,8 +7709,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -7696,14 +7722,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -7776,30 +7802,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -7830,14 +7856,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -7860,20 +7886,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -7897,20 +7923,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -7919,8 +7945,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -7932,14 +7958,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -7963,14 +7989,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -8010,32 +8036,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -8076,8 +8102,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -8085,14 +8111,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -8127,30 +8153,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -8181,14 +8207,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -8211,20 +8237,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -8248,30 +8274,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -8302,14 +8328,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -8332,20 +8358,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -8371,8 +8397,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -8381,8 +8407,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -8391,8 +8417,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -8404,14 +8430,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -8486,28 +8512,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -8519,14 +8545,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -8564,14 +8590,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -8615,28 +8641,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -8648,14 +8674,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -8693,14 +8719,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -8744,28 +8770,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -8777,14 +8803,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -8822,14 +8848,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -8873,28 +8899,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -8906,14 +8932,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -8951,14 +8977,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -9000,20 +9026,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -9022,8 +9048,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -9035,14 +9061,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -9066,14 +9092,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -9115,30 +9141,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -9188,21 +9214,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -9244,30 +9270,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -9298,14 +9324,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -9328,20 +9354,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -9365,30 +9391,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -9438,21 +9464,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -9496,28 +9522,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -9529,14 +9555,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -9574,14 +9600,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -9625,28 +9651,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -9658,14 +9684,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -9703,14 +9729,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -9752,20 +9778,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -9774,8 +9800,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -9787,14 +9813,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -9818,14 +9844,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {
@@ -9869,28 +9895,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -9902,14 +9928,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -9947,14 +9973,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -9998,28 +10024,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -10031,14 +10057,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -10076,14 +10102,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -10127,28 +10153,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -10160,14 +10186,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -10205,14 +10231,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -10256,28 +10282,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.115,
-     "score_dry_year": 0.929,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.906,
-     "score_dry_year": 0.862,
+     "score_normal": 0.846,
+     "score_dry_year": 0.743,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.844,
-     "score_dry_year": 0.754,
+     "score_normal": 0.739,
+     "score_dry_year": 0.583,
      "note": null
     }
    ],
@@ -10289,14 +10315,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -10334,14 +10360,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -10383,30 +10409,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -10437,14 +10463,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -10467,20 +10493,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -10504,30 +10530,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -10577,21 +10603,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -10633,30 +10659,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -10687,14 +10713,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -10717,20 +10743,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -10756,8 +10782,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -10766,8 +10792,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -10776,8 +10802,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -10789,14 +10815,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -10869,30 +10895,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -10923,14 +10949,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -10953,20 +10979,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -10990,30 +11016,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -11044,14 +11070,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -11074,20 +11100,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -11113,28 +11139,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -11146,14 +11172,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -11191,14 +11217,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -11240,30 +11266,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -11313,21 +11339,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -11369,30 +11395,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -11423,14 +11449,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -11453,20 +11479,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -11490,30 +11516,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.531,
-     "score_dry_year": 0.446,
+     "score_normal": 0.478,
+     "score_dry_year": 0.379,
      "note": null
     },
     {
      "rank": 2,
-     "code": "W-C-F",
-     "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.478,
-     "score_dry_year": 0.375,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.399,
+     "score_dry_year": 0.332,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-C-F",
+     "name": "wheat-corn-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.454,
-     "score_dry_year": 0.361,
+     "crops_per_year": 0.67,
+     "score_normal": 0.396,
+     "score_dry_year": 0.293,
      "note": null
     }
    ],
@@ -11544,14 +11570,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -11574,20 +11600,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -11611,30 +11637,30 @@
      "rank": 1,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
-     "score_normal": 0.929,
-     "score_dry_year": 0.849,
+     "score_normal": 0.862,
+     "score_dry_year": 0.742,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 34,
+     "weight_pct": 35,
      "crops_per_year": 1.5,
-     "score_normal": 1.197,
-     "score_dry_year": 1.043,
+     "score_normal": 1.085,
+     "score_dry_year": 0.907,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 32,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.883,
-     "score_dry_year": 0.798,
+     "score_normal": 0.765,
+     "score_dry_year": 0.65,
      "note": null
     }
    ],
@@ -11684,21 +11710,21 @@
        "rank": 1,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 34,
+       "weight_pct": 35,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 32,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -11740,30 +11766,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.523,
-     "score_dry_year": 0.458,
+     "score_normal": 0.494,
+     "score_dry_year": 0.416,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
+     "weight_pct": 31,
      "crops_per_year": 0.67,
-     "score_normal": 0.468,
-     "score_dry_year": 0.396,
+     "score_normal": 0.408,
+     "score_dry_year": 0.35,
      "note": null
     },
     {
      "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
+     "code": "W-F",
+     "name": "wheat-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.445,
-     "score_dry_year": 0.374,
+     "crops_per_year": 0.5,
+     "score_normal": 0.401,
+     "score_dry_year": 0.367,
      "note": null
     }
    ],
@@ -11794,14 +11820,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -11824,20 +11850,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-F",
        "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-F",
+       "name": "wheat-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -11861,30 +11887,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -11915,14 +11941,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -11945,20 +11971,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -11984,8 +12010,8 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 41,
      "crops_per_year": 1.5,
-     "score_normal": 1.341,
-     "score_dry_year": 1.237,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
      "note": null
     },
     {
@@ -11994,8 +12020,8 @@
      "name": "sorghum-soybean",
      "weight_pct": 30,
      "crops_per_year": 1.0,
-     "score_normal": 0.975,
-     "score_dry_year": 0.985,
+     "score_normal": 0.937,
+     "score_dry_year": 0.949,
      "note": null
     },
     {
@@ -12004,8 +12030,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.96,
-     "score_dry_year": 0.965,
+     "score_normal": 0.883,
+     "score_dry_year": 0.848,
      "note": null
     }
    ],
@@ -12017,14 +12043,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -12097,30 +12123,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -12151,14 +12177,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -12181,20 +12207,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -12220,28 +12246,28 @@
      "name": "corn/wheat/double-crop soy",
      "weight_pct": 39,
      "crops_per_year": 1.5,
-     "score_normal": 1.114,
-     "score_dry_year": 0.945,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 32,
+     "weight_pct": 33,
      "crops_per_year": 1.0,
-     "score_normal": 0.907,
-     "score_dry_year": 0.808,
+     "score_normal": 0.859,
+     "score_dry_year": 0.724,
      "note": null
     },
     {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 28,
      "crops_per_year": 1.0,
-     "score_normal": 0.845,
-     "score_dry_year": 0.722,
+     "score_normal": 0.744,
+     "score_dry_year": 0.575,
      "note": null
     }
    ],
@@ -12253,14 +12279,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 57,
+       "weight_pct": 58,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 43,
+       "weight_pct": 42,
        "note": null
       }
      ]
@@ -12298,14 +12324,14 @@
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 32,
+       "weight_pct": 33,
        "note": null
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 28,
        "note": null
       }
      ]
@@ -12347,30 +12373,30 @@
      "rank": 1,
      "code": "W-S-F",
      "name": "wheat-sorghum-fallow",
-     "weight_pct": 36,
+     "weight_pct": 38,
      "crops_per_year": 0.67,
-     "score_normal": 0.542,
-     "score_dry_year": 0.484,
+     "score_normal": 0.499,
+     "score_dry_year": 0.42,
+     "note": null
+    },
+    {
+     "rank": 2,
+     "code": "W-F",
+     "name": "wheat-fallow",
+     "weight_pct": 31,
+     "crops_per_year": 0.5,
+     "score_normal": 0.409,
+     "score_dry_year": 0.357,
      "note": null
     },
     {
      "rank": 2,
      "code": "W-C-F",
      "name": "wheat-corn-fallow",
-     "weight_pct": 33,
-     "crops_per_year": 0.67,
-     "score_normal": 0.485,
-     "score_dry_year": 0.427,
-     "note": null
-    },
-    {
-     "rank": 3,
-     "code": "W-C-S-F",
-     "name": "wheat-corn-sorghum-fallow",
      "weight_pct": 31,
-     "crops_per_year": 0.75,
-     "score_normal": 0.462,
-     "score_dry_year": 0.411,
+     "crops_per_year": 0.67,
+     "score_normal": 0.409,
+     "score_dry_year": 0.334,
      "note": null
     }
    ],
@@ -12401,14 +12427,14 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 39,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "W-C-S-F",
        "name": "wheat-corn-sorghum-fallow",
-       "weight_pct": 33,
+       "weight_pct": 32,
        "note": null
       },
       {
@@ -12431,20 +12457,20 @@
        "rank": 1,
        "code": "W-S-F",
        "name": "wheat-sorghum-fallow",
-       "weight_pct": 36,
+       "weight_pct": 38,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-C-F",
-       "name": "wheat-corn-fallow",
-       "weight_pct": 33,
+       "code": "W-F",
+       "name": "wheat-fallow",
+       "weight_pct": 31,
        "note": null
       },
       {
        "rank": 3,
-       "code": "W-C-S-F",
-       "name": "wheat-corn-sorghum-fallow",
+       "code": "W-C-F",
+       "name": "wheat-corn-fallow",
        "weight_pct": 31,
        "note": null
       }
@@ -12466,32 +12492,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -12532,8 +12558,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -12541,14 +12567,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -12581,32 +12607,32 @@
    "rotations": [
     {
      "rank": 1,
-     "code": "C-Sb",
-     "name": "corn-soybean",
+     "code": "S-Sb",
+     "name": "sorghum-soybean",
      "weight_pct": 34,
      "crops_per_year": 1.0,
-     "score_normal": 0.971,
-     "score_dry_year": 0.979,
+     "score_normal": 0.918,
+     "score_dry_year": 0.835,
      "note": null
     },
     {
      "rank": 2,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 33,
+     "weight_pct": 34,
      "crops_per_year": 1.5,
-     "score_normal": 1.353,
-     "score_dry_year": 1.297,
+     "score_normal": 1.251,
+     "score_dry_year": 1.128,
      "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
     },
     {
      "rank": 3,
-     "code": "S-Sb",
-     "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "code": "C-Sb",
+     "name": "corn-soybean",
+     "weight_pct": 32,
      "crops_per_year": 1.0,
-     "score_normal": 0.977,
-     "score_dry_year": 0.969,
+     "score_normal": 0.865,
+     "score_dry_year": 0.798,
      "note": null
     }
    ],
@@ -12647,8 +12673,8 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-Sb",
-       "name": "corn-soybean",
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
        "weight_pct": 34,
        "note": null
       },
@@ -12656,14 +12682,14 @@
        "rank": 2,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 33,
+       "weight_pct": 34,
        "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -12698,20 +12724,20 @@
      "rank": 1,
      "code": "C-W-dSb",
      "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
+     "weight_pct": 40,
      "crops_per_year": 1.5,
-     "score_normal": 1.318,
-     "score_dry_year": 1.194,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
      "note": null
     },
     {
      "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 31,
      "crops_per_year": 1.0,
-     "score_normal": 0.982,
-     "score_dry_year": 0.98,
+     "score_normal": 0.938,
+     "score_dry_year": 0.905,
      "note": null
     },
     {
@@ -12720,8 +12746,8 @@
      "name": "corn-soybean",
      "weight_pct": 29,
      "crops_per_year": 1.0,
-     "score_normal": 0.955,
-     "score_dry_year": 0.934,
+     "score_normal": 0.874,
+     "score_dry_year": 0.788,
      "note": null
     }
    ],
@@ -12733,14 +12759,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "weight_pct": 59,
        "note": null
       },
       {
        "rank": 2,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 42,
+       "weight_pct": 41,
        "note": null
       }
      ]
@@ -12764,14 +12790,14 @@
        "rank": 1,
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "weight_pct": 40,
        "note": null
       },
       {
        "rank": 2,
        "code": "S-Sb",
        "name": "sorghum-soybean",
-       "weight_pct": 30,
+       "weight_pct": 31,
        "note": null
       },
       {

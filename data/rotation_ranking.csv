@@ -1,37 +1,37 @@
 region,k_state_region,rotation,crops_per_year,mean_crop_index,dry_crop_index,score_normal,score_dry_year,crop_events_simulated,drought_probability_now,alert,rootzone_pct_now,double_crop_ok,rank_normal,rank_dry_year,note,score_used,recommended_rank,basis,weight_pct
-ks_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.74,0.62,1.115,0.929,34,0.06,normal,88.0,True,1,1,,1.115,1,normal-year water,39.0
-ks_central,central,S-Sb (sorghum-soybean),1.0,0.91,0.86,0.906,0.862,22,0.06,normal,88.0,True,2,2,,0.906,2,normal-year water,32.0
-ks_central,central,C-Sb (corn-soybean),1.0,0.84,0.75,0.844,0.754,22,0.06,normal,88.0,True,3,3,,0.844,3,normal-year water,29.0
-ks_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.97,0.96,0.649,0.642,21,0.06,normal,88.0,True,4,4,,0.649,4,normal-year water,
-ks_east_central,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.89,0.82,1.341,1.237,34,0.07,normal,62.0,True,1,1,,1.341,1,normal-year water,41.0
-ks_east_central,east,S-Sb (sorghum-soybean),1.0,0.97,0.98,0.975,0.985,22,0.07,normal,62.0,True,2,2,,0.975,2,normal-year water,30.0
-ks_east_central,east,C-Sb (corn-soybean),1.0,0.96,0.97,0.96,0.965,22,0.07,normal,62.0,True,3,3,,0.96,3,normal-year water,29.0
-ks_north_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.74,0.63,1.114,0.945,34,0.02,normal,100.0,True,1,1,,1.114,1,normal-year water,39.0
-ks_north_central,central,S-Sb (sorghum-soybean),1.0,0.91,0.81,0.907,0.808,22,0.02,normal,100.0,True,2,2,,0.907,2,normal-year water,32.0
-ks_north_central,central,C-Sb (corn-soybean),1.0,0.85,0.72,0.845,0.722,22,0.02,normal,100.0,True,3,3,,0.845,3,normal-year water,29.0
-ks_north_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.96,0.96,0.641,0.64,21,0.02,normal,100.0,True,4,4,,0.641,4,normal-year water,
-ks_northeast,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.88,0.8,1.318,1.194,34,0.03,normal,80.0,True,1,1,,1.318,1,normal-year water,41.0
-ks_northeast,east,S-Sb (sorghum-soybean),1.0,0.98,0.98,0.982,0.98,22,0.03,normal,80.0,True,2,2,,0.982,2,normal-year water,30.0
-ks_northeast,east,C-Sb (corn-soybean),1.0,0.96,0.93,0.955,0.934,22,0.03,normal,80.0,True,3,3,,0.955,3,normal-year water,29.0
-ks_northwest,west,W-S-F (wheat-sorghum-fallow),0.67,0.79,0.69,0.523,0.458,21,0.04,normal,100.0,True,1,1,,0.523,1,normal-year water,36.0
-ks_northwest,west,W-C-F (wheat-corn-fallow),0.67,0.7,0.59,0.468,0.396,21,0.04,normal,100.0,True,2,2,,0.468,2,normal-year water,33.0
-ks_northwest,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.59,0.5,0.445,0.374,32,0.04,normal,100.0,True,3,3,,0.445,3,normal-year water,31.0
-ks_northwest,west,W-F (wheat-fallow),0.5,0.82,0.73,0.409,0.365,10,0.04,normal,100.0,True,4,4,,0.409,4,normal-year water,
-ks_northwest,west,S-S (continuous sorghum),1.0,0.38,0.31,0.377,0.309,11,0.04,normal,100.0,True,5,5,,0.377,5,normal-year water,
-ks_south_central,central,S-Sb (sorghum-soybean),1.0,0.93,0.85,0.929,0.849,22,0.61,warning,,False,1,1,,0.849,1,dry-year water (district on watch/warning),34.0
-ks_south_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.8,0.7,1.197,1.043,34,0.61,warning,,False,2,2,double-crop moved down: soil not above normal or drought alert on (K-State MF2908),0.848,2,dry-year water (district on watch/warning),34.0
-ks_south_central,central,C-Sb (corn-soybean),1.0,0.88,0.8,0.883,0.798,22,0.61,warning,,False,3,3,,0.798,3,dry-year water (district on watch/warning),32.0
-ks_south_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.99,1.0,0.663,0.666,21,0.61,warning,,False,4,4,,0.666,4,dry-year water (district on watch/warning),
-ks_southeast,east,C-Sb (corn-soybean),1.0,0.97,0.98,0.971,0.979,22,0.3,watch,51.0,False,3,1,,0.979,1,dry-year water (district on watch/warning),34.0
-ks_southeast,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.9,0.86,1.353,1.297,34,0.3,watch,51.0,False,2,2,double-crop moved down: soil not above normal or drought alert on (K-State MF2908),0.978,2,dry-year water (district on watch/warning),33.0
-ks_southeast,east,S-Sb (sorghum-soybean),1.0,0.98,0.97,0.977,0.969,22,0.3,watch,51.0,False,1,3,,0.969,3,dry-year water (district on watch/warning),33.0
-ks_southwest,west,W-S-F (wheat-sorghum-fallow),0.67,0.8,0.67,0.531,0.446,21,0.07,normal,89.0,True,1,1,,0.531,1,normal-year water,36.0
-ks_southwest,west,W-C-F (wheat-corn-fallow),0.67,0.72,0.56,0.478,0.375,21,0.07,normal,89.0,True,2,2,,0.478,2,normal-year water,33.0
-ks_southwest,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.61,0.48,0.454,0.361,32,0.07,normal,89.0,True,3,3,,0.454,3,normal-year water,31.0
-ks_southwest,west,W-F (wheat-fallow),0.5,0.82,0.72,0.41,0.359,10,0.07,normal,89.0,True,4,4,,0.41,4,normal-year water,
-ks_southwest,west,S-S (continuous sorghum),1.0,0.38,0.33,0.384,0.326,11,0.07,normal,89.0,True,5,5,,0.384,5,normal-year water,
-ks_west_central,west,W-S-F (wheat-sorghum-fallow),0.67,0.81,0.73,0.542,0.484,21,0.03,normal,99.0,True,1,1,,0.542,1,normal-year water,36.0
-ks_west_central,west,W-C-F (wheat-corn-fallow),0.67,0.73,0.64,0.485,0.427,21,0.03,normal,99.0,True,2,2,,0.485,2,normal-year water,33.0
-ks_west_central,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.62,0.55,0.462,0.411,32,0.03,normal,99.0,True,3,3,,0.462,3,normal-year water,31.0
-ks_west_central,west,W-F (wheat-fallow),0.5,0.84,0.72,0.418,0.361,10,0.03,normal,99.0,True,4,5,,0.418,4,normal-year water,
-ks_west_central,west,S-S (continuous sorghum),1.0,0.39,0.37,0.392,0.365,11,0.03,normal,99.0,True,5,4,,0.392,5,normal-year water,
+ks_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.68,0.53,1.016,0.796,34,0.06,normal,88.0,True,1,1,,1.016,1,normal-year water,39.0
+ks_central,central,S-Sb (sorghum-soybean),1.0,0.85,0.74,0.846,0.743,22,0.06,normal,88.0,True,2,2,,0.846,2,normal-year water,33.0
+ks_central,central,C-Sb (corn-soybean),1.0,0.74,0.58,0.739,0.583,22,0.06,normal,88.0,True,3,3,,0.739,3,normal-year water,28.0
+ks_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.91,0.84,0.607,0.557,21,0.06,normal,88.0,True,4,4,,0.607,4,normal-year water,
+ks_east_central,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.84,0.76,1.265,1.137,34,0.07,normal,62.0,True,1,1,,1.265,1,normal-year water,41.0
+ks_east_central,east,S-Sb (sorghum-soybean),1.0,0.94,0.95,0.937,0.949,22,0.07,normal,62.0,True,2,2,,0.937,2,normal-year water,30.0
+ks_east_central,east,C-Sb (corn-soybean),1.0,0.88,0.85,0.883,0.848,22,0.07,normal,62.0,True,3,3,,0.883,3,normal-year water,29.0
+ks_north_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.68,0.53,1.018,0.798,34,0.02,normal,100.0,True,1,1,,1.018,1,normal-year water,39.0
+ks_north_central,central,S-Sb (sorghum-soybean),1.0,0.86,0.72,0.859,0.724,22,0.02,normal,100.0,True,2,2,,0.859,2,normal-year water,33.0
+ks_north_central,central,C-Sb (corn-soybean),1.0,0.74,0.58,0.744,0.575,22,0.02,normal,100.0,True,3,3,,0.744,3,normal-year water,28.0
+ks_north_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.91,0.84,0.604,0.561,21,0.02,normal,100.0,True,4,4,,0.604,4,normal-year water,
+ks_northeast,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.82,0.7,1.237,1.056,34,0.03,normal,80.0,True,1,1,,1.237,1,normal-year water,40.0
+ks_northeast,east,S-Sb (sorghum-soybean),1.0,0.94,0.9,0.938,0.905,22,0.03,normal,80.0,True,2,2,,0.938,2,normal-year water,31.0
+ks_northeast,east,C-Sb (corn-soybean),1.0,0.87,0.79,0.874,0.788,22,0.03,normal,80.0,True,3,3,,0.874,3,normal-year water,29.0
+ks_northwest,west,W-S-F (wheat-sorghum-fallow),0.67,0.74,0.62,0.494,0.416,21,0.04,normal,100.0,True,1,1,,0.494,1,normal-year water,38.0
+ks_northwest,west,W-C-F (wheat-corn-fallow),0.67,0.61,0.53,0.408,0.35,21,0.04,normal,100.0,True,2,3,,0.408,2,normal-year water,31.0
+ks_northwest,west,W-F (wheat-fallow),0.5,0.8,0.73,0.401,0.367,10,0.04,normal,100.0,True,3,2,,0.401,3,normal-year water,31.0
+ks_northwest,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.52,0.44,0.392,0.329,32,0.04,normal,100.0,True,4,4,,0.392,4,normal-year water,
+ks_northwest,west,S-S (continuous sorghum),1.0,0.34,0.27,0.344,0.269,11,0.04,normal,100.0,True,5,5,,0.344,5,normal-year water,
+ks_south_central,central,S-Sb (sorghum-soybean),1.0,0.86,0.74,0.862,0.742,22,0.61,warning,,False,1,1,,0.742,1,dry-year water (district on watch/warning),35.0
+ks_south_central,central,C-W-dSb (corn/wheat/double-crop soy),1.5,0.72,0.6,1.085,0.907,34,0.61,warning,,False,2,2,double-crop moved down: soil not above normal or drought alert on (K-State MF2908),0.741,2,dry-year water (district on watch/warning),35.0
+ks_south_central,central,C-Sb (corn-soybean),1.0,0.76,0.65,0.765,0.65,22,0.61,warning,,False,3,3,,0.65,3,dry-year water (district on watch/warning),30.0
+ks_south_central,central,W-S-F (wheat-sorghum-fallow),0.67,0.93,0.86,0.621,0.576,21,0.61,warning,,False,4,4,,0.576,4,dry-year water (district on watch/warning),
+ks_southeast,east,S-Sb (sorghum-soybean),1.0,0.92,0.83,0.918,0.835,22,0.3,watch,51.0,False,1,1,,0.835,1,dry-year water (district on watch/warning),34.0
+ks_southeast,east,C-W-dSb (corn/wheat/double-crop soy),1.5,0.83,0.75,1.251,1.128,34,0.3,watch,51.0,False,2,2,double-crop moved down: soil not above normal or drought alert on (K-State MF2908),0.834,2,dry-year water (district on watch/warning),34.0
+ks_southeast,east,C-Sb (corn-soybean),1.0,0.86,0.8,0.865,0.798,22,0.3,watch,51.0,False,3,3,,0.798,3,dry-year water (district on watch/warning),32.0
+ks_southwest,west,W-S-F (wheat-sorghum-fallow),0.67,0.72,0.57,0.478,0.379,21,0.07,normal,89.0,True,1,1,,0.478,1,normal-year water,38.0
+ks_southwest,west,W-F (wheat-fallow),0.5,0.8,0.66,0.399,0.332,10,0.07,normal,89.0,True,2,2,,0.399,2,normal-year water,31.0
+ks_southwest,west,W-C-F (wheat-corn-fallow),0.67,0.59,0.44,0.396,0.293,21,0.07,normal,89.0,True,3,3,,0.396,3,normal-year water,31.0
+ks_southwest,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.5,0.37,0.378,0.279,32,0.07,normal,89.0,True,4,4,,0.378,4,normal-year water,
+ks_southwest,west,S-S (continuous sorghum),1.0,0.33,0.24,0.329,0.245,11,0.07,normal,89.0,True,5,5,,0.329,5,normal-year water,
+ks_west_central,west,W-S-F (wheat-sorghum-fallow),0.67,0.75,0.63,0.499,0.42,21,0.03,normal,99.0,True,1,1,,0.499,1,normal-year water,38.0
+ks_west_central,west,W-F (wheat-fallow),0.5,0.82,0.71,0.409,0.357,10,0.03,normal,99.0,True,2,2,,0.409,2,normal-year water,31.0
+ks_west_central,west,W-C-F (wheat-corn-fallow),0.67,0.61,0.5,0.409,0.334,21,0.03,normal,99.0,True,2,3,,0.409,2,normal-year water,31.0
+ks_west_central,west,W-C-S-F (wheat-corn-sorghum-fallow),0.75,0.52,0.43,0.392,0.32,32,0.03,normal,99.0,True,4,4,,0.392,4,normal-year water,
+ks_west_central,west,S-S (continuous sorghum),1.0,0.34,0.28,0.344,0.278,11,0.03,normal,99.0,True,5,5,,0.344,5,normal-year water,

@@ -80,6 +80,14 @@ CANDIDATES = {
 }
 SUMMER = {"corn", "sorghum", "soybean"}
 w = pd.read_csv(os.path.join(ROOT, "data/power_daily_clean.csv"), parse_dates=["date"])
+# Multi-factor season score (added 2026-11-14): water (ET0-scaled need) x heat x freeze, from NASA
+# POWER, with how much each counts fitted to USDA yields by 21_calibrate_factors.py.
+import sys
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import factors as F
+WX = F.load_weather(ROOT)
+ET0_MEAN = F.et0_season_means(WX)
+COEF = F.load_coefficients(ROOT)
 live = pd.read_csv(os.path.join(ROOT, "data/live_forecast.csv")).set_index("region")
 
 def events(L, crops, phase, y0=2014, y1=2027):
@@ -112,8 +120,8 @@ for region, g in w.groupby("region"):
                     water = season.sum() - dorm.sum() + PSE * dorm.sum() + stored
                 else:
                     water = season.sum() + stored
-                need, ky = CROP[crop][3], CROP[crop][4]
-                yi = max(0.0, 1 - ky * (1 - min(water / need, 1.0)))
+                feats = F.season_features(WX[region], crop, plant, harv, ET0_MEAN[(region, crop)])
+                yi, _parts = F.season_score(crop, water, feats, COEF)
                 if reg == "west" and crop in SUMMER and prev_crop in SUMMER and (plant - prev_harv).days < 330:
                     yi *= 0.5      # K-State Tribune: summer crops ~2x better after wheat/fallow
                 idx[crop].append(yi)
@@ -208,9 +216,11 @@ _md += ["", "* double-crop moved down (soil not above normal or drought alert on
 open(os.path.join(ROOT, "reports/rotation_by_current_crop.md"), "w").write("\n".join(_md) + "\n")
 
 lines = ["# Top 3 crop rotations by Kansas district (decision support, not a guarantee)", "",
-         "Score = water-adjusted crops per year: average FAO relative yield index (Ky method, using "
-         "in-season rain + 25% of rain stored between crops) x crops per year, simulated through real "
-         "2015-2026 NASA POWER rain. Higher = more water-limited production per year. Not a profit ranking.", "",
+         "Score = weather-adjusted crops per year: average season score x crops per year, simulated through "
+         "real 2015-2026 NASA POWER weather. Season score = water factor (FAO Ky method; water = in-season rain "
+         "+ 25% of rain stored between crops; need scaled by that season's NASA POWER reference "
+         "evapotranspiration) x heat factor (hot days in the flowering window) x freeze factor; how much each "
+         "counts was fitted to USDA yields (reports/factor_calibration.md). Not a profit ranking.", "",
          "| district | alert now | root-zone soil now (pct) | basis | 1st (weight) | 2nd (weight) | 3rd (weight) |", "|---|---|---|---|---|---|---|"]
 for region, g in r.groupby("region"):
     col = "score_normal" if g.alert.iloc[0] == "normal" else "score_dry_year"

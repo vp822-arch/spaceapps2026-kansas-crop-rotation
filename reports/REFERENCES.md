@@ -74,6 +74,21 @@ against the source before submitting.
     Notice commonly shown by NASS API users [VERIFY on quickstats.nass.usda.gov/api terms]: "This product
     uses the NASS API but is not endorsed or certified by NASS."
 
+11g. Allen, R. G., Pereira, L. S., Raes, D. & Smith, M. (1998). Crop Evapotranspiration - Guidelines for
+    Computing Crop Water Requirements. FAO Irrigation and Drainage Paper 56 - Penman-Monteith reference
+    evapotranspiration (ET0) computed daily from NASA POWER temperature, humidity, sunlight and wind, used to
+    scale each season's crop water need. https://www.fao.org/3/x0490e/x0490e00.htm
+11h. K-State Research and Extension heat thresholds used for the heat-stress factor: corn - temperatures above
+    95 F around silking (Ciampitti & Knapp, "Impacts of hot weather", 2017,
+    https://secondary.climate.ksu.edu/news/stories/2017/07/impacts_of_hot_weather); wheat - above 82 F just
+    before flowering ("Effects of high temperatures on wheat",
+    https://eupdate.agronomy.ksu.edu/article/effects-of-high-temperatures-on-wheat-546-3); sorghum - heat units
+    capped at 100 F ("Too cool too soon? Finishing up grain sorghum before the first freeze",
+    https://eupdate.agronomy.ksu.edu/article/too-cool-too-soon-finishing-up-grain-sorghum-before-the-first-freeze-661-1);
+    wheat freeze at boot/heading below 28-30 F ("Wheat growth stage update and risk of freeze damage",
+    https://eupdate.agronomy.ksu.edu/article/wheat-growth-stage-update-and-risk-of-freeze-damage-april-7-2017-624-5).
+    Soybean heat threshold (95 F) is a team assumption; the calibration set its weight to 0.
+
 ## Software and services
 12. Cloudflare R2 object storage: hosts the public app file app_rotation_advice.json (Public
     Development URL, r2.dev), uploaded through R2's S3-compatible API. https://developers.cloudflare.com/r2/

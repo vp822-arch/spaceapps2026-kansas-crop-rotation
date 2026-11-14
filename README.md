@@ -43,7 +43,10 @@ NASA POWER daily rain, temperature and soil wetness for 9 Kansas districts (2015
 ahead. In the app it is a hidden input that switches a district to "dry-year" rankings. For each
 district, K-State's candidate rotations (west / central / east) are simulated through the real rain
 record using FAO crop water needs and yield-response factors, with 25% of off-season rain stored
-(14). Score = water-adjusted crops per year. The top 3 get weights that total 100%. A double-crop
+(14). Each simulated season is scored water x heat x freeze from NASA POWER weather: the water need is scaled by
+that season's evapotranspiration (FAO-56), and hot days in each crop's flowering window cut the score; how much each
+factor counts was fitted to real USDA yields and kept only if it predicted held-out years better (21,
+`reports/factor_calibration.md`). Score = weather-adjusted crops per year. The top 3 get weights that total 100%. A double-crop
 rotation is moved down when soil is dry or a drought alert is on. The water scores were checked against real
 USDA county yields 2015-2025 (16, `reports/yield_validation.md`). 14 also makes the current-crop lists, 17 exports the app JSON,
 and 19 publishes it to Cloudflare R2.
