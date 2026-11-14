@@ -1,0 +1,14 @@
+# --- secrets: never commit these ---
+.edl_token
+.nass_key
+.tiger_db_url
+*.env
+*credentials*
+# --- not part of the project ---
+DELETE_LATER/
+handoff/
+Screenshot*
+README_HANDOFF.md
+__pycache__/
+# re-downloaded fresh on every refresh run
+data/raw/power_latest/

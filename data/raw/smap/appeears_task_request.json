@@ -1,0 +1,94 @@
+{
+ "task_type": "point",
+ "task_name": "spaceapps2026_kansas_smap",
+ "params": {
+  "dates": [
+   {
+    "startDate": "04-01-2015",
+    "endDate": "11-11-2026"
+   }
+  ],
+  "layers": [
+   {
+    "product": "SPL3SMP_E.006",
+    "layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag"
+   },
+   {
+    "product": "SPL3SMP_E.006",
+    "layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture"
+   },
+   {
+    "product": "SPL3SMP_E.006",
+    "layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm"
+   },
+   {
+    "product": "SPL3SMP_E.006",
+    "layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_pm"
+   },
+   {
+    "product": "SPL4SMGP.008",
+    "layer": "Geophysical_Data_sm_rootzone"
+   },
+   {
+    "product": "SPL4SMGP.008",
+    "layer": "Geophysical_Data_sm_surface"
+   }
+  ],
+  "coordinates": [
+   {
+    "id": "ks_northwest",
+    "latitude": 39.5,
+    "longitude": -100.9,
+    "category": "district"
+   },
+   {
+    "id": "ks_west_central",
+    "latitude": 38.6,
+    "longitude": -100.9,
+    "category": "district"
+   },
+   {
+    "id": "ks_southwest",
+    "latitude": 37.6,
+    "longitude": -100.9,
+    "category": "district"
+   },
+   {
+    "id": "ks_north_central",
+    "latitude": 39.5,
+    "longitude": -98.3,
+    "category": "district"
+   },
+   {
+    "id": "ks_central",
+    "latitude": 38.6,
+    "longitude": -98.3,
+    "category": "district"
+   },
+   {
+    "id": "ks_south_central",
+    "latitude": 37.6,
+    "longitude": -98.3,
+    "category": "district"
+   },
+   {
+    "id": "ks_northeast",
+    "latitude": 39.5,
+    "longitude": -95.6,
+    "category": "district"
+   },
+   {
+    "id": "ks_east_central",
+    "latitude": 38.6,
+    "longitude": -95.6,
+    "category": "district"
+   },
+   {
+    "id": "ks_southeast",
+    "latitude": 37.5,
+    "longitude": -95.4,
+    "category": "district"
+   }
+  ]
+ }
+}

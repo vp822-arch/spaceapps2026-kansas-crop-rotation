@@ -1,0 +1,46 @@
+# Weekly refresh of the Kansas crop rotation advice, on GitHub's servers.
+# Written by Claude (Anthropic AI) for Varun Pisharody's Space Apps 2026 team.
+# Downloads new NASA POWER + U.S. Drought Monitor data, re-ranks the rotations, runs the safety
+# checks, publishes the app JSON to Cloudflare R2, and commits the updated data/ and reports/ back here.
+# Needs repository secrets (Settings > Secrets and variables > Actions): R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
+# R2_SECRET_ACCESS_KEY, R2_BUCKET. If any check fails the job fails, nothing is published, and GitHub
+# emails the owner.
+name: Weekly refresh
+on:
+  schedule:
+    - cron: "23 13 * * 1"      # Mondays 13:23 UTC (8:23 a.m. Eastern in winter)
+  workflow_dispatch:            # "Run workflow" button for a refresh on demand
+permissions:
+  contents: write
+concurrency:
+  group: weekly-refresh
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        run: python3 -m pip install --user uv && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Refresh advice (download, rank, check, publish to Cloudflare R2)
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          if [ -z "$R2_SECRET_ACCESS_KEY" ]; then
+            echo "R2 secrets not set - refreshing data only, skipping the Cloudflare upload"
+            bash scripts/run_weekly.sh --no-load
+          else
+            bash scripts/run_weekly.sh
+          fi
+      - name: Commit updated data and reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "Weekly refresh: data through $(python3 -c "import json;print(json.load(open('data/app_rotation_advice.json'))['data_through'])")"
+            git push
+          fi
