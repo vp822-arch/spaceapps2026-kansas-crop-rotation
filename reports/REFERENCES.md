@@ -75,22 +75,27 @@ against the source before submitting.
     uses the NASS API but is not endorsed or certified by NASS."
 
 ## Software and services
-12. Tiger Data — Tiger Cloud (managed PostgreSQL with TimescaleDB), database for the app.
-    https://www.tigerdata.com/ — Tiger Cloud hosts TimescaleDB Community Edition, licensed under the
-    Tiger Data License (TSL); TimescaleDB Apache 2 Edition is Apache-2.0
-    (tigerdata.com/docs/about/latest/timescaledb-editions).
+12. Cloudflare R2 object storage: hosts the public app file app_rotation_advice.json (Public
+    Development URL, r2.dev), uploaded through R2's S3-compatible API. https://developers.cloudflare.com/r2/
+    Tiger Data / Tiger Cloud (managed PostgreSQL with TimescaleDB) was used as the database until
+    2026-11-14 and then replaced by R2. https://www.tigerdata.com/
+12b. GitHub and GitHub Actions: code hosting and the weekly automatic refresh
+    (.github/workflows/weekly_refresh.yml). https://github.com/vp822-arch/spaceapps2026-kansas-crop-rotation
 13. Python libraries: pandas 2.3.3 (BSD-3-Clause), NumPy 2.2.6 (BSD-3-Clause), scikit-learn 1.7.2
     (BSD-3-Clause), SciPy 1.15.3 (BSD-3-Clause), Matplotlib 3.10.9 (Matplotlib licence, PSF-based),
-    psycopg 3 (LGPL-3.0-only), zipcodes 3.0.1 (MIT). Versions/licences read from installed package
-    metadata, except NumPy/SciPy/Matplotlib licence names [VERIFY].
-14. uv (Astral) Python package runner, used to install psycopg without admin rights.
-    https://github.com/astral-sh/uv — Apache-2.0 / MIT [VERIFY].
+    zipcodes 3.0.1 (MIT), boto3 (Apache-2.0; R2 upload), psycopg 3 (LGPL-3.0-only; old Tiger loader
+    only). Versions/licences read from installed package metadata, except NumPy/SciPy/Matplotlib
+    licence names [VERIFY].
+14. uv (Astral) Python package runner: installs Python 3.12 and the pinned libraries for each run.
+    https://github.com/astral-sh/uv (Apache-2.0 / MIT [VERIFY]).
 
 ## AI assistance (disclosure)
 15. Claude (Anthropic), an AI assistant, was used throughout the data-analysis work. Claude wrote
     the Python scripts in scripts/ (download, cleaning, normals, model, backtest, charts, crop
-    ranking, rotation ranking, yield validation, database loader; each file is labelled), ran the analysis steps on the team's data,
+    ranking, rotation ranking with the current-crop feature, yield validation, app JSON export,
+    Cloudflare R2 upload, weekly refresh and GitHub Actions workflow; each file is labelled), ran the analysis steps on the team's data,
     researched and checked data sources, and drafted explanations and this reference list. The
-    team chose the problem, the workflow, the Kansas focus, the data stack and Tiger Data, ran the
+    team chose the problem, the workflow, the Kansas focus, the data stack, crop rotation advice with the current-crop
+    feature, Tiger Data and later Cloudflare and GitHub, ran the
     downloads, and reviewed the results. A full time-stamped activity log of the AI's work is kept
-    in the project file "ai-activity-log.md". https://www.anthropic.com/claude
+    in the project files "ai-activity-log.md" and "ai-activity-log-part2.md". https://www.anthropic.com/claude
