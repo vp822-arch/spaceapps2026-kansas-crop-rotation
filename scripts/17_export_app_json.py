@@ -20,7 +20,7 @@ by_current_crop = only rotations that include the crop already in the field (fro
 data/rotation_by_current_crop.csv); "rotations" (no crop given) is unchanged.
 """
 import json, os, re
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,7 +78,7 @@ for c in cmap.sort_values("county").itertuples():
                      "rotations": rows, "by_current_crop": cc_out})
 
 out = {"data_through": data_through,
-       "generated": datetime.now().strftime("%Y-%m-%d %H:%M"),
+       "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
        "disclaimer": ("Decision support from NASA POWER weather data and FAO crop water methods, "
                       "not a guarantee. Based on water only (no prices, costs, soils or irrigation). "
                       "Check with K-State Research and Extension before acting."),
