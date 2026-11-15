@@ -426,3 +426,11 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - SMAP: the laptop was reachable; data/raw/smap still holds only the task id and request files, so no AppEEARS results have been downloaded. Varun can re-run 06_pull_smap_appeears.py tomorrow (it resumes the saved task). Integration cutoff is noon.
 - Behind: data slides (deck format unknown).
 - Next check-in scheduled for 08:15 Sunday (overnight quiet hours skipped).
+
+### 63. Sun Nov 15, 06:59–08:16 — Directions; morning check-in (scheduled)
+- 06:59–07:25: Varun asked for directions back to the event. Claude confirmed the downtown A to Jay St–MetroTech, listed the stops from 14 St, and gave NYU Tandon's main address (6 MetroTech Center, Brooklyn, NY 11201). Claude noted the exact room is in the event page or registration email.
+- 08:16 check-in:
+  - GitHub: no new runs (latest is still #3, success).
+  - SMAP: still no AppEEARS results (only the task files). Cutoff is noon.
+  - Behind: data slides (deck format unknown), MIT license decision, [VERIFY] references.
+  - Next check-in scheduled for ~09:45.
