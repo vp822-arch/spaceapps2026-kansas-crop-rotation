@@ -387,3 +387,9 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - **Laptop (C:\SpaceApps2026):** code was final, but 9 output files were still from the old water-only run of 17:51. The old copies were kept in DELETE_LATER/old_water_only_outputs_20261114 (nothing deleted) and replaced with the final versions. The pipeline was then re-run on the laptop offline: all checks passed and the outputs are identical to GitHub. (The chart file's bytes changed in transfer, but its pixels are identical.)
 - **Guides fixed:** the team guide still mentioned the Tiger .env file, "database upload", the old app-team instructions (Tiger view) and old limits; the app guide said the repo was private, that R2 was "live once enabled", and "water-adjusted" scores. All corrected to the final setup (R2 JSON, GitHub Actions, water × heat, public repo, 2 later checks).
 - **Remaining stale-word hits** in the repo are history only (references noting Tiger was used before, old run-log lines, the water-only comparison column).
+
+### 58. 19:25–19:35 — Checking the checks (Varun: "double check your double check")
+- The independent scorer reads the raw NASA POWER JSON files and the fitted factor weights, not the pipeline's outputs.
+- Planted errors in copies of the final app file: weights changed by 1, wrong rotation, county dropped, alert changed, message removed, gated double-crop moved first, top weights swapped. Every one was caught; the real file passed with 0 problems. (The first swap test was planted in a county whose top two weights are tied at 34, so it changed nothing; repeated on a county with unequal weights, it was caught.)
+- Calibration (21) and yield validation (16) re-run from scratch in a fresh clone: factor weights, validation data and report byte-identical.
+- Yield correlations recomputed with separate pure-Python code (own ranking and within-district centring): corn 0.57, sorghum 0.69, soybeans 0.72, wheat 0.51, matching the report.
