@@ -393,3 +393,18 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - Planted errors in copies of the final app file: weights changed by 1, wrong rotation, county dropped, alert changed, message removed, gated double-crop moved first, top weights swapped. Every one was caught; the real file passed with 0 problems. (The first swap test was planted in a county whose top two weights are tied at 34, so it changed nothing; repeated on a county with unequal weights, it was caught.)
 - Calibration (21) and yield validation (16) re-run from scratch in a fresh clone: factor weights, validation data and report byte-identical.
 - Yield correlations recomputed with separate pure-Python code (own ranking and within-district centring): corn 0.57, sorghum 0.69, soybeans 0.72, wheat 0.51, matching the report.
+
+### 59. 19:28–19:30 — Confidence question and sign-off
+- Varun asked how confident Claude is that the teammate won't hit errors from his work. Claude said about 95%: the data link, code and numbers are verified. The remaining risk is mostly outside his code:
+  - the teammate's app integration (not yet connected; watch that `fips` is text)
+  - a future weekly run failing (safety checks keep last week's advice)
+  - r2.dev rate limits for heavy traffic
+  - tied weights (keep the rank order)
+- Varun asked whether the refresh runs with his laptop closed. Claude: yes. It runs on GitHub's servers every Monday at 8:23 a.m. Eastern (next run Nov 16), or on demand with Run workflow.
+- Varun logged out for the night. The 8:10 p.m. project check-in stays scheduled. Nothing has been submitted to Space Apps.
+- Open for Nov 15:
+  - data slides
+  - MIT license decision
+  - [VERIFY] items in the references
+  - SMAP (by noon)
+  - submission (team target 9 p.m., deadline 11:59 p.m.)
