@@ -43,8 +43,13 @@ def finish(ok, msg):
     sys.exit(0 if ok else 1)
 
 # Security: the Cloudflare R2 upload keys are given ONLY to the upload step (19), never to the
-# download/analysis steps, so no other code path can read or leak them.
-upload_env = dict(os.environ, REFRESH="1", MPLBACKEND="Agg")
+# download/analysis steps, so no other code path can read or leak them. Any GitHub/cloud tokens that
+# happen to be in the environment are removed from every step, including the upload.
+TOKENS = ("GH_TOKEN", "GITHUB_TOKEN", "ACTIONS_RUNTIME_TOKEN", "ACTIONS_ID_TOKEN_REQUEST_TOKEN",
+          "ACTIONS_ID_TOKEN_REQUEST_URL")
+upload_env = {k: v for k, v in os.environ.items()
+              if k not in TOKENS and not k.startswith("AWS_")}
+upload_env.update(REFRESH="1", MPLBACKEND="Agg")
 env = {k: v for k, v in upload_env.items() if not k.startswith("R2_")}
 for step in STEPS:
     t0 = time.time()

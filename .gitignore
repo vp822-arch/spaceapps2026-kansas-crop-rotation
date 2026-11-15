@@ -20,3 +20,5 @@ data/raw/power_latest/
 .edl_token*
 .nass_key*
 id_rsa*
+# local Python environment built by run_weekly.sh from requirements.lock
+.venv*/

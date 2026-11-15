@@ -30,20 +30,27 @@ The data holds no personal information. It comes from public NASA, USDA and Drou
 
 - **Least-privilege job token.** The weekly workflow can only push commits to this repo (`permissions: contents: write`).
 - **Keys reach one step only.** `run_weekly.py` strips every `R2_*` variable before running the download and analysis steps, and passes the keys only to the upload step (`19_upload_cloudflare_r2.py`). Tested: the analysis steps see no R2 variables.
-- **Pinned code.** `actions/checkout` is pinned to an exact commit, `uv` to 0.13.8, and every Python library to an exact version (pandas, numpy, scikit-learn, scipy, matplotlib, zipcodes, boto3, botocore). An upstream change can't silently alter what runs.
+- **Pinned and fingerprinted code.** Every Python library, including the ~17 that the main 8 depend on, is installed from `requirements.lock`, with exact versions and SHA-256 fingerprints (`uv pip sync --require-hashes`). If any download doesn't match its fingerprint, the install stops and nothing runs (tested with a tampered fingerprint). `uv` itself is pinned by version and fingerprint (`scripts/uv-requirements.txt`), and `actions/checkout` is pinned to an exact commit.
+- **Push token kept away from the analysis code.** The checkout step doesn't store GitHub's push token (`persist-credentials: false`). The token is handed only to the final commit step, and only to push to this repo.
 - **Safety checks before publishing.** If the data is stale, a district is missing, a district lacks exactly 3 rotations, weights don't total 100, the current-crop table is incomplete or the factor file is missing, nothing is uploaded and the app keeps the previous advice.
 - **No accidental secret commits.** The workflow commits only `data/` and `reports/`, and refuses if a staged file name looks like a secret.
 - **Safe triggers.** The workflow runs only on its weekly schedule or a manual click by someone with write access. It never runs code from pull requests or forks.
 - **Encrypted downloads.** All downloads use HTTPS.
 - **Secret handling in scripts.** Secrets are never printed. The SMAP script asks for the Earthdata password with a hidden prompt and never saves it.
 
-## 4. Cloudflare R2 (the published file)
+## 4. The app (for the developer)
+
+- Read the advice file as **data only**. Show its text with `textContent` (or your framework's normal text binding), never `innerHTML` or `eval`. Then, even if the file were ever tampered with, it could not run code in users' browsers.
+- Check the shape before showing it: `counties` is a list, and weights are numbers. If the fetch or the check fails, show a friendly "advice unavailable" message.
+- Load it over HTTPS only (the r2.dev link is HTTPS).
+
+## 5. Cloudflare R2 (the published file)
 
 - The bucket `kansas-crop-advice` serves one public file through the r2.dev development link. The upload overwrites only that one key.
 - CORS allows only GET and HEAD, from any site. That is fine for public read-only data.
 - r2.dev links are rate-limited. A real launch should use a custom domain and Cloudflare's caching.
 
-## 5. GitHub repo settings
+## 6. GitHub repo settings
 
 Already on (checked 2026-11-15):
 - Secret scanning.
@@ -52,8 +59,9 @@ Already on (checked 2026-11-15):
 Recommended. Turn these on in Settings; only the owner can:
 - **Dependabot alerts and security updates:** Settings → Code security.
 - **Ruleset on `main`:** block force-pushes and branch deletion (Settings → Rules → Rulesets). Do not require pull requests, or the weekly bot can't push.
+- **Actions policy:** Settings → Actions → General → allow only GitHub-made actions (the workflow uses only `actions/checkout`).
 
-## 6. If a secret leaks (incident steps)
+## 7. If a secret leaks (incident steps)
 
 1. **Revoke it right away** where it was issued:
    - R2 token: Cloudflare → R2 → Manage API tokens.
@@ -65,7 +73,7 @@ Recommended. Turn these on in Settings; only the owner can:
 5. Check the bucket and the live file for anything unexpected.
 6. If it was committed to git, deleting the file is not enough, because it stays in history. Revoking the key is what makes it safe.
 
-## 7. Checklist (before handoff, before the demo, then monthly)
+## 8. Checklist (before handoff, before the demo, then monthly)
 
 - [ ] `git ls-files` shows no `.env`, token, key or credential files.
 - [ ] The latest weekly workflow run succeeded, and the live link loads with recent `data_through`.
@@ -73,7 +81,7 @@ Recommended. Turn these on in Settings; only the owner can:
 - [ ] Retired services are shut down: delete the Tiger Cloud service, or at least run `DROP ROLE app_reader;`.
 - [ ] No screenshots of consoles or keys are in shared folders.
 
-## 8. Audit record
+## 9. Audit record
 
 2026-11-15, by Claude (Anthropic AI):
 - Full git history scanned for key, token, password and private-key patterns, and for secret file names: none found. The public r2.dev link is intentionally public.
@@ -88,4 +96,5 @@ Recommended. Turn these on in Settings; only the owner can:
   - full offline run plus upload to a local fake S3: results identical, upload verified
   - analysis steps see no R2 variables
   - a missing key stops the upload with a clear message
+- Second pass (same day): all libraries, including the ones the main 8 depend on, are now locked with SHA-256 fingerprints, and uv is fingerprinted too. The push token is no longer stored during the analysis steps. App-side guidance was added (data-only rendering). Tested: a tampered fingerprint is refused, the real lock installs, the full run gives identical results, and the upload works with keys isolated.
 - Laptop folder: the secret files are present locally only. The folder is not a git repo, and none of them are in GitHub. Two screenshots from setup (14:14 and 17:48) were not opened. If they show any console or key, move them out of the project folder.

@@ -58,17 +58,18 @@ Full details and caveats are in `reports/rotation_ranking.md`.
 
 Needs: Linux, macOS or WSL, plus [uv](https://docs.astral.sh/uv/). `run_weekly.sh` installs Python 3.12 and
 the exact library versions (pandas 2.3.3, NumPy 2.2.6, scikit-learn 1.7.2, SciPy 1.15.3,
-Matplotlib 3.10.9, zipcodes 3.0.1, psycopg 3).
+Matplotlib 3.10.9, zipcodes 3.0.1, boto3 1.44.3, plus their dependencies) from `requirements.lock`,
+which also pins each package's SHA-256 fingerprint, into a local `.venv-weekly/` folder.
 
-1. Re-run all the analysis on the included data, with no internet and no database:
+1. Re-run all the analysis on the included data, with no internet and no upload:
    `bash scripts/run_weekly.sh --skip-download --no-load`
-2. Also download fresh NASA POWER and Drought Monitor data (public, no login), without touching the database:
+2. Also download fresh NASA POWER and Drought Monitor data (public, no login), without publishing anything:
    `bash scripts/run_weekly.sh --no-load`
 3. Full refresh, including publishing to Cloudflare R2: needs the four R2 settings as environment
    variables or in `.r2.env` (never commit them). Then run `bash scripts/run_weekly.sh`.
 
-The run stops at the first failed step, and it skips the database upload if any safety check fails
-(data age, 9 districts, 3 rotations each, weights total 100, current-crop table complete). Every run is logged in `reports/run_log.md`.
+The run stops at the first failed step, and it skips the Cloudflare upload if any safety check fails
+(data age, 9 districts, 3 rotations each, weights total 100, current-crop table complete, factor weights file present). Every run is logged in `reports/run_log.md`.
 
 ## Steps that need your own credentials (not needed for the weekly refresh)
 

@@ -23,8 +23,10 @@ jobs:
     steps:
       # Pinned to an exact commit (actions/checkout v4.4.0) so a moved tag can't change what runs.
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false   # the push token is NOT stored while the analysis code runs
       - name: Install uv
-        run: python3 -m pip install --user "uv==0.13.8" && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+        run: python3 -m pip install --user --require-hashes -r scripts/uv-requirements.txt && echo "$HOME/.local/bin" >> "$GITHUB_PATH"   # uv pinned by version + fingerprint
       - name: Refresh advice (download, rank, check, publish to Cloudflare R2)
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -39,6 +41,8 @@ jobs:
             bash scripts/run_weekly.sh
           fi
       - name: Commit updated data and reports
+        env:
+          GH_TOKEN: ${{ github.token }}   # used only here, only to push to this repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
@@ -49,5 +53,5 @@ jobs:
           fi
           if git diff --cached --quiet; then echo "no changes"; else
             git commit -m "Weekly refresh: data through $(python3 -c "import json;print(json.load(open('data/app_rotation_advice.json'))['data_through'])")"
-            git push
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           fi
