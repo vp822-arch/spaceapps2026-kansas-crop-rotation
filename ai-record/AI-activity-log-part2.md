@@ -530,3 +530,18 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - alfalfa price
   - draft PRs
 - Before the team makes soilsense public (decision 4), Claude scanned the team repo's full history (70 commits, 31 branches) for secrets. None found: .dev.vars is gitignored, and .dev.vars.example holds only placeholders (an xxxx SID and a 555-range number).
+
+### 70. 10:25–10:50 — Submission form help; link check; references fixed
+- Space Apps form sections, drafted for Varun (he fills in and submits the form himself; nothing submitted by Claude):
+  - SI-use disclosure: categories and a professional statement. Gaps flagged: no AI label yet on the charts, and no disclosure in the data file's metadata.
+  - NASA Data: Varun entered NASA POWER, CMR and AppEEARS.
+  - Partner & Other Data: 30 entries in citation format.
+- **Every link checked for public access** (web fetches plus Varun's browser):
+  - The 4 K-State eUpdate article links are dead: K-State moved its eUpdate site in 2026, and both the article links and the old PDF archive now redirect to the new homepage, which only holds 2026. They were replaced with Internet Archive copies (all returned status 200).
+  - The USDM API link failed and was replaced with the USDM Web Service Information page.
+  - The Staggenborg link text was corrected to the paper's real title.
+  - QuickStats was blocked for automated fetches but opened in the browser.
+- **REFERENCES.md updated:**
+  - MF2908 author list confirmed from the PDF (Roozeboom, Duncan, Shoup, Olson, Holman, Peterson, Thompson).
+  - NumPy and SciPy (BSD) and Matplotlib (PSF-based) licences confirmed from package metadata; uv licence confirmed (Apache-2.0 or MIT).
+  - The only [VERIFY] left is the NASS API notice.

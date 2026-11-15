@@ -29,9 +29,10 @@ against the source before submitting.
    https://cmr.earthdata.nasa.gov/
 
 ## Other data
+(K-State moved its eUpdate articles in 2026; the four eUpdate links below point to Internet Archive copies, checked 2026-11-15.)
 6. U.S. Drought Monitor, weekly county drought statistics (percent area D0–D4), via the USDM data
    services. National Drought Mitigation Center (University of Nebraska–Lincoln), USDA, NOAA and NASA.
-   https://droughtmonitor.unl.edu/ — https://usdmdataservices.unl.edu/api
+   https://droughtmonitor.unl.edu/ — https://droughtmonitor.unl.edu/DmData/DataDownload/WebServiceInfo.aspx (data services: usdmdataservices.unl.edu)
    Credit line (official wording, droughtmonitor.unl.edu/About/Permission.aspx): "The U.S. Drought
    Monitor is jointly produced by the National Drought Mitigation Center at the University of
    Nebraska-Lincoln, the United States Department of Agriculture, the National Oceanic and
@@ -40,7 +41,7 @@ against the source before submitting.
 7. USDA NASS (2010). Usual Planting and Harvesting Dates for U.S. Field Crops, Agricultural
    Handbook 628 — Kansas "most active" planting/harvest dates, as tabulated by K-State Agronomy
    eUpdate, "Expected number of days to plant summer crops in Kansas".
-   https://eupdate.agronomy.ksu.edu/article/expected-number-of-days-to-plant-summer-crops-in-kansas-501-6
+   https://web.archive.org/web/20250810122741/https://eupdate.agronomy.ksu.edu/article/expected-number-of-days-to-plant-summer-crops-in-kansas-501-6
 8. FAO (1986), approximate seasonal crop water needs (maize 500–800 mm, sorghum 450–650,
    soybean 450–700, wheat 450–650), as tabulated by SSWM "Crop Selection".
    https://sswm.info/sswm-solutions-bop-markets/improving-water-and-sanitation-services-provided-public-institutions-0/crop-selection
@@ -48,12 +49,12 @@ against the source before submitting.
    Paper 33 — seasonal Ky (maize 1.25, sorghum 0.9, soybean 0.85, winter wheat 1.05), as given in
    Table 1 of Steduto, P. et al. (2012), Crop Yield Response to Water, FAO Irrigation and Drainage
    Paper 66. https://fao.org/4/i2800e/i2800e02.pdf
-10. Staggenborg, S. A. et al. (2008), on grain sorghum's drought tolerance in Kansas and Nebraska.
+10. Staggenborg, S. A. et al. (2008). Grain Sorghum and Corn Comparisons: Yield, Economic, and Environmental Responses (sorghum's drought tolerance in Kansas and Nebraska).
     https://mssoy.org/sites/default/files/documents/staggenborg-et-al-2008.pdf
 11. zipcodes Python package (ZIP-code latitude/longitude, used to approximate Kansas county
     centres). https://github.com/seanpianka/zipcodes — MIT licence.
 
-11b. Roozeboom, K. et al. [VERIFY author list] (2009). No-Till in Kansas: Rotations and Cultural Practices. K-State
+11b. Roozeboom, K., Duncan, S., Shoup, D., Olson, B., Holman, J., Peterson, D. & Thompson, C. (2009). No-Till in Kansas: Rotations and Cultural Practices. K-State
     Research and Extension MF2908 - regional rotation guidance (west/central/east) and the
     double-cropping moisture rule. https://bookstore.ksre.ksu.edu/pubs/mf2908.pdf
 11c. Schlegel, A., Haag, L., O'Brien, D. et al. Large-Scale Dryland Cropping Systems (K-State
@@ -82,11 +83,11 @@ against the source before submitting.
     95 F around silking (Ciampitti & Knapp, "Impacts of hot weather", 2017,
     https://secondary.climate.ksu.edu/news/stories/2017/07/impacts_of_hot_weather); wheat - above 82 F just
     before flowering ("Effects of high temperatures on wheat",
-    https://eupdate.agronomy.ksu.edu/article/effects-of-high-temperatures-on-wheat-546-3); sorghum - heat units
+    https://web.archive.org/web/20240817043119/https://eupdate.agronomy.ksu.edu/article/effects-of-high-temperatures-on-wheat-546-3); sorghum - heat units
     capped at 100 F ("Too cool too soon? Finishing up grain sorghum before the first freeze",
-    https://eupdate.agronomy.ksu.edu/article/too-cool-too-soon-finishing-up-grain-sorghum-before-the-first-freeze-661-1);
+    https://web.archive.org/web/20260520002540/https://eupdate.agronomy.ksu.edu/article/too-cool-too-soon-finishing-up-grain-sorghum-before-the-first-freeze-661-1);
     wheat freeze at boot/heading below 28-30 F ("Wheat growth stage update and risk of freeze damage",
-    https://eupdate.agronomy.ksu.edu/article/wheat-growth-stage-update-and-risk-of-freeze-damage-april-7-2017-624-5).
+    https://web.archive.org/web/20260512122707/https://eupdate.agronomy.ksu.edu/article/wheat-growth-stage-update-and-risk-of-freeze-damage-april-7-2017-624-5).
     Soybean heat threshold (95 F) is a team assumption; the calibration set its weight to 0.
 
 ## Software and services
@@ -99,10 +100,10 @@ against the source before submitting.
 13. Python libraries: pandas 2.3.3 (BSD-3-Clause), NumPy 2.2.6 (BSD-3-Clause), scikit-learn 1.7.2
     (BSD-3-Clause), SciPy 1.15.3 (BSD-3-Clause), Matplotlib 3.10.9 (Matplotlib licence, PSF-based),
     zipcodes 3.0.1 (MIT), boto3 (Apache-2.0; R2 upload), psycopg 3 (LGPL-3.0-only; old Tiger loader
-    only). Versions/licences read from installed package metadata, except NumPy/SciPy/Matplotlib
-    licence names [VERIFY].
+    only). Versions/licences read from installed package metadata, including NumPy/SciPy (BSD)
+    and Matplotlib (PSF-based), checked 2026-11-15.
 14. uv (Astral) Python package runner: installs Python 3.12 and the pinned libraries for each run.
-    https://github.com/astral-sh/uv (Apache-2.0 / MIT [VERIFY]).
+    https://github.com/astral-sh/uv (Apache-2.0 or MIT, checked 2026-11-15).
 
 ## AI assistance (disclosure)
 15. Claude (Anthropic), an AI assistant, was used throughout the data-analysis work. Claude wrote
