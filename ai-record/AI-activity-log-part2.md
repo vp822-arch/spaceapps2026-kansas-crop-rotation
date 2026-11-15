@@ -559,3 +559,15 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 ### 72. 11:01–11:15 — Second full link check; team science brief read
 - Varun asked for all links to be checked again. All 26 final "Other Data" links were reopened in his built-in browser, and all passed: correct page titles, and content checks for the 5 archived K-State articles (including the 95 °F text in the hot-weather article).
 - Varun shared "SoilSense: the science" (the team's 5-page science note) and asked which NASA data the team uses. Claude listed the NASA datasets from it, split into: in the main model; merged on the `next` branch; and only if marked ready.
+
+### 73. 11:06–11:15 — Team NASA dataset links found and browser-checked
+- Exact products confirmed in the team code (jzeng151/soilsense):
+  - Daymet: on both noon and next.
+  - On next only: SMAP L4 SPL4SMGP v8 (#72), GRACE/GRACE-FO JPL mascon RL06.3 v4 (#78), and MODIS MOD13Q1 v061 via the ORNL DAAC subsetting service (#61).
+  - Not merged: IMERG and HLS (mentions only).
+- All links opened in Varun's browser with the correct titles:
+  - Daymet: https://daymet.ornl.gov/ and its DOI https://doi.org/10.3334/ORNLDAAC/2129
+  - SMAP L4: https://doi.org/10.5067/T5RUATAQREF8
+  - GRACE: https://doi.org/10.5067/TEMSC-3JC634
+  - MODIS: https://doi.org/10.5067/MODIS/MOD13Q1.061 and the subsetting service https://doi.org/10.3334/ORNLDAAC/1600
+  - Conditional: IMERG https://gpm.nasa.gov/data/imerg and HLS https://hls.gsfc.nasa.gov/
