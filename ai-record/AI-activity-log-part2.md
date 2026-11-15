@@ -503,3 +503,10 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - SMAP: still no results. Cutoff is noon.
   - Behind: data slides (deck format unknown), MIT license, [VERIFY] references.
   - Next check-in ~11:15.
+
+### 67. 09:47–09:55 — Fixes from the app team's review notes
+- **Note 3 (Field Watch vs "dropped drought warnings"):** Claude checked jzeng151/soilsense. Field Watch is a live dry-spell alert that uses Varun's Kansas drought outlook as its second signal for Kansas fields. Varun's notes were out of date, so they were fixed to match the app:
+  - README: the drought model now says it drives the dry-year rankings and Field Watch, with its test-year skill (AUC 0.89, Brier 0.127 vs 0.182).
+  - App developer guide: "hidden input / team dropped drought warnings" replaced with what the outlook does and honest wording for showing it (chance of drought conditions in about 4 weeks; thresholds are demonstration settings); field descriptions updated.
+  - Whether Field Watch is the headline feature is left to the team.
+- **Note on the snapshot copy:** the team app already reads Varun's live Cloudflare link (KS_ADVICE_URL in src/worker/fieldwatch/sources.ts, KSTATE_URL in src/worker/data/kstate.ts), so it gets every weekly refresh. Only the reference copy in soilsense/kansas-crop-rotation/data/ is frozen at 14 Nov 23:45. Nothing was pushed to soilsense; options were given to Varun.

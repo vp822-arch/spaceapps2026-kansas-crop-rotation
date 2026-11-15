@@ -41,8 +41,10 @@ report: `reports/rotation_by_current_crop.md`; JSON: each county's `by_current_c
 ## The algorithm in one paragraph
 
 NASA POWER daily rain, temperature and soil wetness for 9 Kansas districts (2015 to now) are cleaned
-(02) and compared with each district's normal (03). A drought model (09 to 11) predicts drought 4 weeks
-ahead. In the app it is a hidden input that switches a district to "dry-year" rankings. For each
+(02) and compared with each district's normal (03). A drought model (09 to 11) predicts drought about 4 weeks
+ahead (test years 2023-26: AUC 0.89, Brier 0.127 vs 0.182 for "same as now"). It switches a district to "dry-year"
+rankings, and the team app's Field Watch dry-spell alert uses it (`alert`, `drought_probability_now`) as a second signal
+for Kansas fields. For each
 district, K-State's candidate rotations (west / central / east) are simulated through the real rain
 record using FAO crop water needs and yield-response factors, with 25% of off-season rain stored
 (14). Each simulated season is scored water x heat x freeze from NASA POWER weather: the water need is scaled by
