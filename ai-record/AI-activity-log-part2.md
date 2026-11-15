@@ -608,3 +608,7 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 ## 78. PM check-in and judge-prep explanations (Nov 15, ~12:50–14:15 ET)
 - Explained to Varun, for judge Q&A: crops per year; how the heat coefficient b is found (grid search of 25 values against USDA yields); that b is one fixed value per crop, not refit per year or weekly; how leave-one-year-out works; how the logistic-regression drought model works (inputs, logistic curve, 2015-22 training, 2023+ test, backup model without root zone).
 - Check-in at 14:15: no new GitHub Actions run (hardened workflow still untested on GitHub); team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main.
+
+## 79. PM check-in and data-source questions (Nov 15, ~14:40–15:45 ET)
+- Answered Varun's questions on NASA dataset sources (his model: NASA POWER only, SMAP tried but not used; team app: Daymet, SMAP L4, GRACE, MODIS via ORNL TESViS, POWER) and on SSURGO (USDA NRCS soil survey, not NASA; used only by the team app, via Soil Data Access).
+- Check-in at 15:45: no new GitHub Actions run (hardened workflow still untested on GitHub); team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main.
