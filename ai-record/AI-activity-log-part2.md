@@ -598,3 +598,9 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - Checked the team repo (jzeng151/soilsense) on main 0d60689: typecheck passed, 374 tests passed (11 live-network tests skipped by design), build passed; next is fully merged into main (PR #88); repo is public; no secrets found; no CI workflows exist.
 - Checked the live R2 file in Varun's browser: HTTP 200, generated 2026-11-14 23:45 UTC, data through 2026-11-09, 105 counties, every top-3 and every by-current-crop list sums to 100, alert levels match the 30/50 % thresholds in all counties, the double-crop rule is applied correctly in all 26 gated counties. South-central root-zone is blank by design (flagged suspect; backup drought model used).
 - Found: the hardened weekly workflow has not yet run on GitHub (last run used commit ef05241, before the security changes); no AI disclosure on the team repo's main (only in open PR #87).
+
+## 77. PM check-in and review of Varun's model explanation (Nov 15, ~12:45 ET)
+- No new GitHub Actions run; the hardened weekly workflow is still untested on GitHub (last run Nov 14 23:44, commit ef05241).
+- SMAP: the AppEEARS request from Nov 14 produced no results by the noon cutoff (only the task ID and request files exist). Recorded as tried but not used in Varun's model; the team app uses SMAP L4 separately.
+- Team repo: public; PR #89 merged; PRs #81 and #87 still open; no AI disclosure on main yet.
+- Reviewed Varun's spoken explanation of the model and corrected it: the score is higher = better; b is fitted only for corn and sorghum (wheat and soybean b = 0) against USDA yields; there is no separate drought-year b (dry-year score = 25th percentile of past seasons with the same b); the score is not converted into a yield; the 35-year/soil figures belong to the team app, not his model (his model uses NASA POWER from Apr 2015).
