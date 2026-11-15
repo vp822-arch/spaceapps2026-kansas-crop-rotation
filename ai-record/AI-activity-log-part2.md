@@ -434,3 +434,30 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - SMAP: still no AppEEARS results (only the task files). Cutoff is noon.
   - Behind: data slides (deck format unknown), MIT license decision, [VERIFY] references.
   - Next check-in scheduled for ~09:45.
+
+### 64. 09:13–09:50 — Security protocol and hardening (Varun: "create a cybersecurity protocol… make sure everything is safe")
+- **Audit:**
+  - The full git history (all commits) was scanned for key, token, password and private-key patterns, and for secret file names. None found; the r2.dev link is public by design.
+  - GitHub already has secret scanning and push protection on. Dependabot security updates are off, and main has no ruleset; Varun can turn these on (owner only).
+  - The workflow only runs on its schedule or a manual click, never from pull requests. All downloads use HTTPS. No unsafe code patterns (shell=True, eval, pickle, verify=False). Secrets are never printed.
+  - Laptop: the secret files exist only locally (the folder is not a git repo). Two setup screenshots (14:14, 17:48) were not opened; Varun should move them out if they show a console or key.
+- **Fixes (commit d4fc37f):**
+  - run_weekly.py: every R2_* variable is stripped from the download and analysis steps; the keys go only to the upload step.
+  - run_weekly.sh: boto3 and botocore pinned to 1.44.3; the unused psycopg dependency was removed.
+  - Workflow: actions/checkout pinned to commit 11d5960 (v4.4.0) and uv to 0.13.8; a guard refuses to commit secret-looking files.
+  - .gitignore: extra secret patterns.
+  - Stale "database NOT updated" messages corrected.
+- **New SECURITY.md** (linked from the README):
+  - what is public and what is secret, and where each secret lives
+  - team rules
+  - automation controls
+  - Cloudflare R2 exposure
+  - repo settings
+  - incident steps for a leaked key
+  - checklist
+  - audit record
+- **Tests:**
+  - Offline run plus upload to a local fake S3 (moto) with dummy keys: a probe in an analysis step saw no R2 variables, all checks passed, and the upload was verified identical. Ranking outputs were byte-identical to before, and the independent checker found 0 problems.
+  - A missing key stops the upload with a clear message.
+  - Not testable by Claude: the hardened workflow on GitHub's servers. Varun should click Run workflow once.
+- **Laptop:** the 6 updated files were copied to C:\SpaceApps2026 and verified by hash.
