@@ -10,7 +10,7 @@
 # (gitignored) and is synced to exactly the lock file on every run.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-VENV=.venv-weekly
+VENV="${WEEKLY_VENV:-.venv-weekly}"   # override with WEEKLY_VENV=/some/path if needed
 [ -x "$VENV/bin/python" ] || uv venv -q --python 3.12 "$VENV"
 VIRTUAL_ENV="$VENV" uv pip sync -q --require-hashes requirements.lock
 "$VENV/bin/python" scripts/run_weekly.py "$@"
