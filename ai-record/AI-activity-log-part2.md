@@ -555,3 +555,7 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - **Ciampitti & Knapp, climate.ksu.edu:** the page wouldn't load in the browser. Switched to an archived copy of the same article in eUpdate issue 642 ("Impacts of hot weather on summer row crops"); its text includes the 95 °F threshold.
 - **Confirmed working in the browser:** both Drought Monitor links; FAO 66 and FAO 56; SSWM; MF2908; the Sweeney DOI; all 4 archived K-State eUpdates (titles and text checked); the GitHub repo; pandas, NumPy, scikit-learn, SciPy and Matplotlib; zipcodes, boto3 and uv; Cloudflare R2 docs; the ai-record folder.
 - REFERENCES.md updated to match.
+
+### 72. 11:01–11:15 — Second full link check; team science brief read
+- Varun asked for all links to be checked again. All 26 final "Other Data" links were reopened in his built-in browser, and all passed: correct page titles, and content checks for the 5 archived K-State articles (including the 95 °F text in the hot-weather article).
+- Varun shared "SoilSense: the science" (the team's 5-page science note) and asked which NASA data the team uses. Claude listed the NASA datasets from it, split into: in the main model; merged on the `next` branch; and only if marked ready.
