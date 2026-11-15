@@ -545,3 +545,13 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - MF2908 author list confirmed from the PDF (Roozeboom, Duncan, Shoup, Olson, Holman, Peterson, Thompson).
   - NumPy and SciPy (BSD) and Matplotlib (PSF-based) licences confirmed from package metadata; uv licence confirmed (Apache-2.0 or MIT).
   - The only [VERIFY] left is the NASS API notice.
+
+### 71. 10:45–11:10 — Every submission link checked in a real browser; form trimmed to fit
+- The form's "Other Data" list only fits 26 links. Claude suggested dropping Staggenborg (background only) and adding one combined entry: "Anthropic Claude – AI Assistant…" pointing to the ai-record folder. GitHub Actions and Tiger stay listed in REFERENCES.md only.
+- All links were opened one by one in Varun's built-in browser (independent of Claude's fetcher). Problems found and fixed:
+  - **QuickStats homepage:** sends narrow or mobile screens to a 403 page. Switched to https://quickstats.nass.usda.gov/api, which loads at any width.
+  - **Schlegel et al. (core.ac.uk):** blocked by a bot check. Switched to its DOI, https://doi.org/10.4148/2378-5977.1255 (the same 2016 report, on New Prairie Press).
+  - **Norwood (1987):** the link was a file download. Switched to its DOI, https://doi.org/10.4148/2378-5977.7250.
+  - **Ciampitti & Knapp, climate.ksu.edu:** the page wouldn't load in the browser. Switched to an archived copy of the same article in eUpdate issue 642 ("Impacts of hot weather on summer row crops"); its text includes the 95 °F threshold.
+- **Confirmed working in the browser:** both Drought Monitor links; FAO 66 and FAO 56; SSWM; MF2908; the Sweeney DOI; all 4 archived K-State eUpdates (titles and text checked); the GitHub repo; pandas, NumPy, scikit-learn, SciPy and Matplotlib; zipcodes, boto3 and uv; Cloudflare R2 docs; the ai-record folder.
+- REFERENCES.md updated to match.

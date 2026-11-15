@@ -29,7 +29,7 @@ against the source before submitting.
    https://cmr.earthdata.nasa.gov/
 
 ## Other data
-(K-State moved its eUpdate articles in 2026; the four eUpdate links below point to Internet Archive copies, checked 2026-11-15.)
+(K-State moved its eUpdate articles in 2026; the eUpdate links below point to Internet Archive copies, checked 2026-11-15.)
 6. U.S. Drought Monitor, weekly county drought statistics (percent area D0–D4), via the USDM data
    services. National Drought Mitigation Center (University of Nebraska–Lincoln), USDA, NOAA and NASA.
    https://droughtmonitor.unl.edu/ — https://droughtmonitor.unl.edu/DmData/DataDownload/WebServiceInfo.aspx (data services: usdmdataservices.unl.edu)
@@ -60,18 +60,18 @@ against the source before submitting.
 11c. Schlegel, A., Haag, L., O'Brien, D. et al. Large-Scale Dryland Cropping Systems (K-State
     Southwest Research-Extension Center, Tribune, 2008-2015/2019) - rotations W-F, W-C-F, W-S-F,
     W-C-S-F, continuous sorghum; summer crops ~2x higher after wheat; W-S-F most profitable.
-    https://core.ac.uk/download/267192795.pdf ; ASA 2014 abstract
+    https://doi.org/10.4148/2378-5977.1255 ; ASA 2014 abstract
     https://scisoc.confex.com/scisoc/2014am/webprogram/Paper86814.html
 11d. Norwood, C. (1987). Continuous Cropping of Dryland Grain Sorghum. K-State Southwest Kansas
     Branch Experiment Station - fallow stores 20-30% of precipitation.
-    https://ksu.janeway.systems/kaesrr/article/7459/galley/7390/download
+    https://doi.org/10.4148/2378-5977.7250
 11e. Sweeney, D. W. (2017). Tillage and Nitrogen Placement Effects on Yields in a Short-Season
     Corn/Wheat/Double-Crop Soybean Rotation. Kansas Agricultural Experiment Station Research
     Reports 3(2). https://doi.org/10.4148/2378-5977.1379
 11f. USDA National Agricultural Statistics Service, Quick Stats database - Kansas county-level
     YIELD (corn, sorghum, soybeans, winter wheat; "ALL PRODUCTION PRACTICES"), 2015-2025, accessed
     2026-11-14 via the Quick Stats API. Used to validate the model's weather scores and to calibrate the heat factor (21).
-    https://quickstats.nass.usda.gov/ - API: https://quickstats.nass.usda.gov/api
+    https://quickstats.nass.usda.gov/api
     Notice commonly shown by NASS API users [VERIFY on quickstats.nass.usda.gov/api terms]: "This product
     uses the NASS API but is not endorsed or certified by NASS."
 
@@ -81,7 +81,7 @@ against the source before submitting.
     scale each season's crop water need. https://www.fao.org/3/x0490e/x0490e00.htm
 11h. K-State Research and Extension heat thresholds used for the heat-stress factor: corn - temperatures above
     95 F around silking (Ciampitti & Knapp, "Impacts of hot weather", 2017,
-    https://secondary.climate.ksu.edu/news/stories/2017/07/impacts_of_hot_weather); wheat - above 82 F just
+    https://web.archive.org/web/20250708022853/https://eupdate.agronomy.ksu.edu/article/impacts-of-hot-weather-on-summer-row-crops-642-4); wheat - above 82 F just
     before flowering ("Effects of high temperatures on wheat",
     https://web.archive.org/web/20240817043119/https://eupdate.agronomy.ksu.edu/article/effects-of-high-temperatures-on-wheat-546-3); sorghum - heat units
     capped at 100 F ("Too cool too soon? Finishing up grain sorghum before the first freeze",
