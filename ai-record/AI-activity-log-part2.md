@@ -584,3 +584,10 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - IMERG, HLS and PRISM PRs are still drafts; PR #81 is open.
 - High-level overview of the team app and its datasets, from the code. NASA datasets: POWER, Daymet and GIBS MODIS imagery on all branches; SMAP, GRACE and MODIS NDVI on next only. Their README's data table is out of date.
 - 11:16 check-in: no new GitHub runs (the hardened workflow still hasn't run on GitHub); SMAP (Varun's AppEEARS request) still has no results, with 45 minutes to the noon cutoff. Next check-in ~12:45.
+
+### 75. 11:16–11:22 — Contribution summary; AI record pushed to the team repo
+- Varun asked which datasets he added and what he contributed. Claude compared his model with the team repo's history:
+  - His own NASA POWER, USDA NASS and Drought Monitor pipelines. The team also uses POWER and NASS, built separately, and added the Drought Monitor at 00:02 Sunday, 4 minutes after his PR #55 was merged; whether that was inspired by his is unknown.
+  - K-State rotation research and the FAO water math reach the app only through his model.
+  - What only he contributed: the "second opinion" model the app reads live; the drought signal for Field Watch; validation against real harvests; the weekly refresh.
+- Varun asked to push his AI log into the team repo, labelled as his. Claude opened jzeng151/soilsense PR #87 (branch ai-record-varun, docs only). It adds ai-record/varun-pisharody/ with a README stating it covers only his Kansas-model part, plus AI_USE_STATEMENT.md and both logs. No secrets; main was not touched.
