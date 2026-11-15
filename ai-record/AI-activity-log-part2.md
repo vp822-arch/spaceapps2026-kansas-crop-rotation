@@ -571,3 +571,16 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - GRACE: https://doi.org/10.5067/TEMSC-3JC634
   - MODIS: https://doi.org/10.5067/MODIS/MOD13Q1.061 and the subsetting service https://doi.org/10.3334/ORNLDAAC/1600
   - Conditional: IMERG https://gpm.nasa.gov/data/imerg and HLS https://hls.gsfc.nasa.gov/
+
+### 74. 11:09–11:16 — Drought and crop-history Q&A; AI-use wording; team repo review; check-in
+- Q&A for judge prep:
+  - How Varun's model handles drought: scored on real rain, a dry-year score, and the weekly drought-outlook switch.
+  - Whether actual field crop history is used: no in Varun's model (county yields for validation, plus the current crop from the farmer); yes in the team app, via the USDA CDL.
+- AI-use field: Varun's draft understated the AI use. Claude gave a corrected one-line version: "Used Claude/Gemini/GitHub Copilot for the crop-rotation model and analysis code, UI scaffolding, WCAG contrast/translation QA, data-parsing scripts, and debugging."
+- Team repo (jzeng151/soilsense) review:
+  - It's still private, and history is clean of secrets, so it's safe to make public (Jason must do it).
+  - No AI disclosure in its docs or commit metadata; Claude offered a docs-only PR.
+  - Branch question (main/noon/next) is unresolved.
+  - IMERG, HLS and PRISM PRs are still drafts; PR #81 is open.
+- High-level overview of the team app and its datasets, from the code. NASA datasets: POWER, Daymet and GIBS MODIS imagery on all branches; SMAP, GRACE and MODIS NDVI on next only. Their README's data table is out of date.
+- 11:16 check-in: no new GitHub runs (the hardened workflow still hasn't run on GitHub); SMAP (Varun's AppEEARS request) still has no results, with 45 minutes to the noon cutoff. Next check-in ~12:45.
