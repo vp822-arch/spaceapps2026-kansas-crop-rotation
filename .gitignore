@@ -12,3 +12,11 @@ README_HANDOFF.md
 __pycache__/
 # re-downloaded fresh on every refresh run
 data/raw/power_latest/
+# --- extra secret patterns (security protocol) ---
+.r2.env
+*.pem
+*.key
+*.token
+.edl_token*
+.nass_key*
+id_rsa*

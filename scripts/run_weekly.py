@@ -42,14 +42,17 @@ def finish(ok, msg):
     print(("\nDONE: " if ok else "\nSTOPPED: ") + msg)
     sys.exit(0 if ok else 1)
 
-env = dict(os.environ, REFRESH="1", MPLBACKEND="Agg")
+# Security: the Cloudflare R2 upload keys are given ONLY to the upload step (19), never to the
+# download/analysis steps, so no other code path can read or leak them.
+upload_env = dict(os.environ, REFRESH="1", MPLBACKEND="Agg")
+env = {k: v for k, v in upload_env.items() if not k.startswith("R2_")}
 for step in STEPS:
     t0 = time.time()
     print(f"\n=== {step} ===", flush=True)
     r = subprocess.run([sys.executable, S(step)], cwd=ROOT, env=env)
     log_lines.append(f"- {step}: {'ok' if r.returncode == 0 else 'FAILED'} ({time.time()-t0:.0f} s)")
     if r.returncode != 0:
-        finish(False, f"{step} failed; database NOT updated, app still shows the previous advice.")
+        finish(False, f"{step} failed; nothing published, the app still shows the previous advice.")
 
 # ---- sanity checks before anything reaches the app ----
 import pandas as pd
@@ -95,13 +98,13 @@ print(f"data through {last_day:%Y-%m-%d}")
 if problems:
     for p in problems:
         print("  PROBLEM:", p)
-    finish(False, "checks failed (" + "; ".join(problems) + "); database NOT updated.")
+    finish(False, "checks failed (" + "; ".join(problems) + "); nothing published.")
 print("all checks passed")
 
 if "--no-load" in args:
     finish(True, "pipeline refreshed; Cloudflare upload skipped (--no-load).")
 print("\n=== 19_upload_cloudflare_r2.py ===", flush=True)
-r = subprocess.run([sys.executable, S("19_upload_cloudflare_r2.py")], cwd=ROOT, env=env)
+r = subprocess.run([sys.executable, S("19_upload_cloudflare_r2.py")], cwd=ROOT, env=upload_env)
 if r.returncode != 0:
     finish(False, "Cloudflare upload failed; the app keeps showing the previous advice.")
 finish(True, f"advice refreshed with data through {last_day:%Y-%m-%d} and published to Cloudflare R2.")

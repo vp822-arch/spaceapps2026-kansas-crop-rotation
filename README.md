@@ -5,6 +5,8 @@ written by Claude (Anthropic AI), and each file is labelled. List both in the su
 
 **No passwords, tokens or keys are in this package.** Get your own where noted below.
 
+**Security:** see [SECURITY.md](SECURITY.md) for how keys are handled, what's public, and what to do if a key leaks.
+
 ## Team access
 
 - **Algorithm and data:** this repo. Keep it **private** and add teammates as collaborators.

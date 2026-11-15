@@ -3,13 +3,15 @@
 # Downloads new NASA POWER + U.S. Drought Monitor data, re-ranks the rotations, runs the safety
 # checks, publishes the app JSON to Cloudflare R2, and commits the updated data/ and reports/ back here.
 # Needs repository secrets (Settings > Secrets and variables > Actions): R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
-# R2_SECRET_ACCESS_KEY, R2_BUCKET. If any check fails the job fails, nothing is published, and GitHub
+# R2_SECRET_ACCESS_KEY, R2_BUCKET. run_weekly.py passes these ONLY to the upload step. If any check fails the job fails, nothing is published, and GitHub
 # emails the owner.
 name: Weekly refresh
 on:
   schedule:
     - cron: "23 13 * * 1"      # Mondays 13:23 UTC (8:23 a.m. Eastern in winter)
   workflow_dispatch:            # "Run workflow" button for a refresh on demand
+# Security: least privilege. The job token can only push commits to this repo (needed to save the
+# refreshed data); it cannot touch issues, packages, other repos or settings.
 permissions:
   contents: write
 concurrency:
@@ -19,9 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      # Pinned to an exact commit (actions/checkout v4.4.0) so a moved tag can't change what runs.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Install uv
-        run: python3 -m pip install --user uv && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+        run: python3 -m pip install --user "uv==0.13.8" && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Refresh advice (download, rank, check, publish to Cloudflare R2)
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
@@ -40,6 +43,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add data reports
+          # Security guard: refuse to commit anything that looks like a secret file.
+          if git diff --cached --name-only | grep -Ei '(\.env$|credential|token|nass_key|secret|\.pem$|\.key$)'; then
+            echo "Refusing to commit a secret-looking file"; exit 1
+          fi
           if git diff --cached --quiet; then echo "no changes"; else
             git commit -m "Weekly refresh: data through $(python3 -c "import json;print(json.load(open('data/app_rotation_advice.json'))['data_through'])")"
             git push
