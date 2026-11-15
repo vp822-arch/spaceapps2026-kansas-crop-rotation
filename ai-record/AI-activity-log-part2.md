@@ -604,3 +604,7 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - SMAP: the AppEEARS request from Nov 14 produced no results by the noon cutoff (only the task ID and request files exist). Recorded as tried but not used in Varun's model; the team app uses SMAP L4 separately.
 - Team repo: public; PR #89 merged; PRs #81 and #87 still open; no AI disclosure on main yet.
 - Reviewed Varun's spoken explanation of the model and corrected it: the score is higher = better; b is fitted only for corn and sorghum (wheat and soybean b = 0) against USDA yields; there is no separate drought-year b (dry-year score = 25th percentile of past seasons with the same b); the score is not converted into a yield; the 35-year/soil figures belong to the team app, not his model (his model uses NASA POWER from Apr 2015).
+
+## 78. PM check-in and judge-prep explanations (Nov 15, ~12:50–14:15 ET)
+- Explained to Varun, for judge Q&A: crops per year; how the heat coefficient b is found (grid search of 25 values against USDA yields); that b is one fixed value per crop, not refit per year or weekly; how leave-one-year-out works; how the logistic-regression drought model works (inputs, logistic curve, 2015-22 training, 2023+ test, backup model without root zone).
+- Check-in at 14:15: no new GitHub Actions run (hardened workflow still untested on GitHub); team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main.
