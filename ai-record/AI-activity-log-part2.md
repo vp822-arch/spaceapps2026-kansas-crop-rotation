@@ -510,3 +510,10 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - App developer guide: "hidden input / team dropped drought warnings" replaced with what the outlook does and honest wording for showing it (chance of drought conditions in about 4 weeks; thresholds are demonstration settings); field descriptions updated.
   - Whether Field Watch is the headline feature is left to the team.
 - **Note on the snapshot copy:** the team app already reads Varun's live Cloudflare link (KS_ADVICE_URL in src/worker/fieldwatch/sources.ts, KSTATE_URL in src/worker/data/kstate.ts), so it gets every weekly refresh. Only the reference copy in soilsense/kansas-crop-rotation/data/ is frozen at 14 Nov 23:45. Nothing was pushed to soilsense; options were given to Varun.
+
+### 68. 09:53–10:05 — Snapshot note PR; explaining the math for judges
+- Varun chose option 1. Claude opened jzeng151/soilsense PR #81 (docs only, branch kansas-snapshot-note):
+  - kansas-crop-rotation/README.md: the top note now says the folder is a frozen snapshot from 2026-11-14 23:45 UTC.
+  - New data/README_SNAPSHOT.md: the data is not live; the app reads the live link.
+  - No code or data changed; main was not touched.
+- Varun said judges will ask about the code and he doesn't fully understand it. Claude explained the algorithm, the math and the statistics in plain language, using the actual parameters from the code (14, factors.py, 10, 21, 16).
