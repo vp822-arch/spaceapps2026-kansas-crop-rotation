@@ -420,3 +420,9 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - SMAP: laptop offline, can't check.
 - Behind: data slides (deck format unknown).
 - Next check-in scheduled for ~23:15.
+
+### 62. 23:16 — Project manager check-in (scheduled)
+- GitHub: no new runs (latest is still #3, success). Live advice unchanged.
+- SMAP: the laptop was reachable; data/raw/smap still holds only the task id and request files, so no AppEEARS results have been downloaded. Varun can re-run 06_pull_smap_appeears.py tomorrow (it resumes the saved task). Integration cutoff is noon.
+- Behind: data slides (deck format unknown).
+- Next check-in scheduled for 08:15 Sunday (overnight quiet hours skipped).
