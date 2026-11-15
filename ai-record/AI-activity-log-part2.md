@@ -591,3 +591,10 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - K-State rotation research and the FAO water math reach the app only through his model.
   - What only he contributed: the "second opinion" model the app reads live; the drought signal for Field Watch; validation against real harvests; the weekly refresh.
 - Varun asked to push his AI log into the team repo, labelled as his. Claude opened jzeng151/soilsense PR #87 (branch ai-record-varun, docs only). It adds ai-record/varun-pisharody/ with a README stating it covers only his Kansas-model part, plus AI_USE_STATEMENT.md and both logs. No secrets; main was not touched.
+
+## 76. Email check for a consent form, judge quiz, and full team-repo check (Nov 15, ~11:30–12:15 ET)
+- Searched Varun's NJIT Gmail (read-only) for a Space Apps consent/waiver form. None was found; only the NYC attendance form, the acceptance email (points to the Local Event page) and an MLH side-session registration.
+- Built a 14-question quiz on the rotation model for judge prep. Correction made afterwards: the double-crop rule moves the double-crop rotation below the best 2-year rotation; it does not remove it.
+- Checked the team repo (jzeng151/soilsense) on main 0d60689: typecheck passed, 374 tests passed (11 live-network tests skipped by design), build passed; next is fully merged into main (PR #88); repo is public; no secrets found; no CI workflows exist.
+- Checked the live R2 file in Varun's browser: HTTP 200, generated 2026-11-14 23:45 UTC, data through 2026-11-09, 105 counties, every top-3 and every by-current-crop list sums to 100, alert levels match the 30/50 % thresholds in all counties, the double-crop rule is applied correctly in all 26 gated counties. South-central root-zone is blank by design (flagged suspect; backup drought model used).
+- Found: the hardened weekly workflow has not yet run on GitHub (last run used commit ef05241, before the security changes); no AI disclosure on the team repo's main (only in open PR #87).
