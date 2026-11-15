@@ -484,3 +484,22 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - Turn on Dependabot, a main ruleset and the Actions policy.
   - Check the 2 screenshots.
   - Retire Tiger Cloud.
+
+### 66. 09:36–09:46 — NASA data list, remaining risks, code delivery, walkthrough; check-in
+- Varun asked which NASA data was used. Claude: in the final product, only NASA POWER (its variables listed). SMAP was requested but not received. CMR and AppEEARS were research tools only. The U.S. Drought Monitor, USDA NASS and the K-State/FAO publications are non-NASA.
+- Claude listed the remaining security risks, all on the account side:
+  - retire Tiger Cloud
+  - check 2 screenshots
+  - confirm the first Earthdata token was revoked
+  - GitHub settings and 2FA
+  - check the R2 token's scope
+  - run the workflow once
+  - the app must show the advice as text, not HTML
+  - r2.dev rate limits
+- Varun asked for all the code. Claude sent kansas_crop_rotation_ALL_CODE.txt (2,374 lines, with a contents list) and kansas_crop_rotation_code.zip (29 files); a secret scan found nothing.
+- Line-by-line walkthrough started with factors.py lines 1–49.
+- 09:46 check-in:
+  - GitHub: no new runs. The hardened workflow (security commits) has not run on GitHub yet; Varun should click Run workflow.
+  - SMAP: still no results. Cutoff is noon.
+  - Behind: data slides (deck format unknown), MIT license, [VERIFY] references.
+  - Next check-in ~11:15.
