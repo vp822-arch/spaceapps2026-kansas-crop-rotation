@@ -612,3 +612,6 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 ## 79. PM check-in and data-source questions (Nov 15, ~14:40–15:45 ET)
 - Answered Varun's questions on NASA dataset sources (his model: NASA POWER only, SMAP tried but not used; team app: Daymet, SMAP L4, GRACE, MODIS via ORNL TESViS, POWER) and on SSURGO (USDA NRCS soil survey, not NASA; used only by the team app, via Soil Data Access).
 - Check-in at 15:45: no new GitHub Actions run (hardened workflow still untested on GitHub); team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main.
+
+## 80. PM check-in (Nov 15, 17:15 ET)
+- No new GitHub Actions run (hardened weekly workflow still untested on GitHub); team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main. No work was done by Claude between check-ins.
