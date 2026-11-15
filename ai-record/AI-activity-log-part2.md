@@ -517,3 +517,16 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - New data/README_SNAPSHOT.md: the data is not live; the app reads the live link.
   - No code or data changed; main was not touched.
 - Varun said judges will ask about the code and he doesn't fully understand it. Claude explained the algorithm, the math and the statistics in plain language, using the actual parameters from the code (14, factors.py, 10, 21, 16).
+
+### 69. 09:55–10:10 — Read the team's brief (BRIEF.pdf, 08:28)
+- Varun shared the SoilSense team brief from his partner. Claude read it and pulled out the items that involve Varun's work.
+- Already handled this morning:
+  - decision 3 (Varun's notes now describe Field Watch's use of the outlook)
+  - the snapshot copy (PR #81)
+- App-team items, not Varun's code:
+  - current-crop bug (the card uses the satellite crop)
+  - offline fallback to the repo copy
+  - credit lines
+  - alfalfa price
+  - draft PRs
+- Before the team makes soilsense public (decision 4), Claude scanned the team repo's full history (70 commits, 31 branches) for secrets. None found: .dev.vars is gitignored, and .dev.vars.example holds only placeholders (an xxxx SID and a 555-range number).
