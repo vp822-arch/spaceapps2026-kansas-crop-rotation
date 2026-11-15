@@ -461,3 +461,26 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
   - A missing key stops the upload with a clear message.
   - Not testable by Claude: the hardened workflow on GitHub's servers. Varun should click Run workflow once.
 - **Laptop:** the 6 updated files were copied to C:\SpaceApps2026 and verified by hash.
+
+### 65. 09:19–10:05 — Security pass 2: closing breach paths, triple-checked (Varun: "make sure there are no potentials for breaches")
+- **New gaps found and fixed (commits 2831369, 24e8e34):**
+  - About 17 indirect libraries (pillow, urllib3 and others) were unpinned, and nothing checked downloads against fingerprints. All 25 packages are now in requirements.lock with SHA-256 hashes, and run_weekly.sh installs them with `uv pip sync --require-hashes` into .venv-weekly/ (gitignored; location can be overridden with WEEKLY_VENV).
+  - uv in the workflow is now pinned by fingerprint (scripts/uv-requirements.txt).
+  - The checkout step no longer stores GitHub's push token (persist-credentials: false); the token is given only to the final commit step.
+  - run_weekly.py now strips GitHub and cloud token variables from every step; R2 keys still go only to the upload.
+  - SECURITY.md: app-side guidance (show the file as data only, never innerHTML/eval; validate its shape), Actions policy, and the second-pass audit record. README updated.
+- **Check 1 (local, as a new machine):**
+  - Fresh cache, uv 0.13.8, fake keys, and a probe planted in an analysis step: the probe saw no R2 or token variables.
+  - Upload to a local fake S3 verified identical. Outputs byte-identical; app JSON identical except its timestamp; independent checker 0 problems; independent scores 0/36 mismatches. The environment holds exactly the 25 locked packages.
+- **Check 2 (do the protections block what they should?):**
+  - With every fingerprint for one package spoiled, the install stopped and 0 steps ran. (Spoiling only one of a package's two fingerprints passes by design, because either valid file is accepted; an already-installed environment is not re-checked, which is noted in SECURITY.md.)
+  - The commit guard blocked all 6 secret-looking file names and allowed normal data. .gitignore blocks .r2.env, the credentials file, .edl_token, .nass_key, screenshots and .venv-weekly.
+- **Check 3 (from GitHub, as a stranger):**
+  - Fresh clone, README command: all checks passed, outputs identical, checker 0 problems.
+  - The full 18-commit history was rescanned: 0 secret patterns, and no secret-like file ever committed.
+  - Laptop: 9 updated files were copied and verified by hash. The run passed with results identical to GitHub; the run's environment was built outside the project folder because Claude's shell there cannot delete temporary files. A partial test environment was moved to DELETE_LATER/partial_venv_from_claude_test_20261115.
+- **Still needs Varun:**
+  - Run workflow once (the GitHub server side can't be tested from here).
+  - Turn on Dependabot, a main ruleset and the Actions policy.
+  - Check the 2 screenshots.
+  - Retire Tiger Cloud.
