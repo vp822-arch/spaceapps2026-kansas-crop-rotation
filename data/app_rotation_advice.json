@@ -1,6 +1,6 @@
 {
- "data_through": "2026-11-09",
- "generated": "2026-11-14 23:45 UTC",
+ "data_through": "2026-11-16",
+ "generated": "2026-11-16 22:57 UTC",
  "disclaimer": "Decision support from NASA POWER weather data (rain, water demand and heat stress; freeze risk was tested and not needed) and FAO crop methods, not a guarantee. Weather only (no prices, costs, soils or irrigation). Check with K-State Research and Extension before acting.",
  "rotation_glossary": {
   "C-Sb": "corn-soybean",
@@ -52,8 +52,8 @@
    "lat": 37.866,
    "lon": -95.277,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -168,34 +168,34 @@
    "lon": -95.279,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -208,17 +208,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -239,23 +239,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -268,7 +268,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -282,35 +282,35 @@
    "lat": 39.52,
    "lon": -95.293,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -323,17 +323,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -354,23 +354,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -383,7 +383,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -397,7 +397,7 @@
    "lat": 37.233,
    "lon": -98.6,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -526,35 +526,35 @@
    "lat": 38.431,
    "lon": -98.798,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -567,17 +567,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -605,23 +605,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -631,17 +631,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -655,8 +655,8 @@
    "lat": 37.883,
    "lon": -94.836,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -770,35 +770,35 @@
    "lat": 39.805,
    "lon": -95.55,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -811,17 +811,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -842,23 +842,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -871,7 +871,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -885,7 +885,7 @@
    "lat": 37.77,
    "lon": -96.914,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -1015,34 +1015,34 @@
    "lon": -96.621,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -1055,17 +1055,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -1086,23 +1086,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -1115,7 +1115,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -1129,8 +1129,8 @@
    "lat": 37.075,
    "lon": -96.195,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -1244,8 +1244,8 @@
    "lat": 37.152,
    "lon": -94.779,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -1359,8 +1359,8 @@
    "lat": 39.719,
    "lon": -101.721,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -1480,8 +1480,8 @@
    "lat": 37.221,
    "lon": -99.917,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -1602,34 +1602,34 @@
    "lon": -97.132,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -1642,17 +1642,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -1680,23 +1680,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -1706,17 +1706,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -1731,34 +1731,34 @@
    "lon": -97.626,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -1771,17 +1771,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -1809,23 +1809,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -1835,17 +1835,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -1860,34 +1860,34 @@
    "lon": -95.738,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -1900,17 +1900,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -1931,23 +1931,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -1960,7 +1960,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -1974,7 +1974,7 @@
    "lat": 37.259,
    "lon": -99.31,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -2103,7 +2103,7 @@
    "lat": 37.291,
    "lon": -96.872,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -2232,8 +2232,8 @@
    "lat": 37.504,
    "lon": -94.797,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -2347,8 +2347,8 @@
    "lat": 39.739,
    "lon": -100.357,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -2468,35 +2468,35 @@
    "lat": 38.866,
    "lon": -97.114,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -2509,17 +2509,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -2547,23 +2547,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -2573,17 +2573,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -2597,35 +2597,35 @@
    "lat": 39.767,
    "lon": -95.11,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -2638,17 +2638,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -2669,23 +2669,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -2698,7 +2698,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -2713,34 +2713,34 @@
    "lon": -95.253,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -2753,17 +2753,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -2784,23 +2784,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -2813,7 +2813,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -2827,7 +2827,7 @@
    "lat": 37.912,
    "lon": -99.326,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -2956,8 +2956,8 @@
    "lat": 37.424,
    "lon": -96.203,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -3071,35 +3071,35 @@
    "lat": 38.844,
    "lon": -99.257,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -3112,17 +3112,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -3150,23 +3150,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -3176,17 +3176,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -3200,35 +3200,35 @@
    "lat": 38.682,
    "lon": -98.302,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -3241,17 +3241,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -3279,23 +3279,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -3305,17 +3305,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -3329,8 +3329,8 @@
    "lat": 37.959,
    "lon": -100.868,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -3450,8 +3450,8 @@
    "lat": 37.713,
    "lon": -99.831,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -3572,34 +3572,34 @@
    "lon": -95.246,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -3612,17 +3612,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -3643,23 +3643,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -3672,7 +3672,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -3686,35 +3686,35 @@
    "lat": 39.087,
    "lon": -96.846,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -3727,17 +3727,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -3758,23 +3758,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -3787,7 +3787,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -3801,8 +3801,8 @@
    "lat": 39.038,
    "lon": -100.439,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -3922,8 +3922,8 @@
    "lat": 39.351,
    "lon": -99.892,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -4043,8 +4043,8 @@
    "lat": 37.579,
    "lon": -101.349,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -4164,8 +4164,8 @@
    "lat": 37.691,
    "lon": -100.434,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -4285,8 +4285,8 @@
    "lat": 38.496,
    "lon": -101.766,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -4406,8 +4406,8 @@
    "lat": 37.85,
    "lon": -96.152,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -4521,8 +4521,8 @@
    "lat": 37.98,
    "lon": -101.774,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -4642,7 +4642,7 @@
    "lat": 37.177,
    "lon": -98.009,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -4771,7 +4771,7 @@
    "lat": 38.047,
    "lon": -97.425,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -4900,8 +4900,8 @@
    "lat": 37.481,
    "lon": -100.895,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -5021,8 +5021,8 @@
    "lat": 38.091,
    "lon": -99.813,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -5142,35 +5142,35 @@
    "lat": 39.432,
    "lon": -95.763,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -5183,17 +5183,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -5214,23 +5214,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -5243,7 +5243,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -5257,35 +5257,35 @@
    "lat": 39.233,
    "lon": -95.384,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -5298,17 +5298,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -5329,23 +5329,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -5358,7 +5358,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -5373,34 +5373,34 @@
    "lon": -98.178,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -5413,17 +5413,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -5451,23 +5451,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -5477,17 +5477,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -5502,34 +5502,34 @@
    "lon": -94.742,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -5542,17 +5542,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -5573,23 +5573,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -5602,7 +5602,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -5616,8 +5616,8 @@
    "lat": 37.972,
    "lon": -101.207,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -5737,7 +5737,7 @@
    "lat": 37.514,
    "lon": -98.169,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -5866,7 +5866,7 @@
    "lat": 37.591,
    "lon": -99.304,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -5995,8 +5995,8 @@
    "lat": 37.175,
    "lon": -95.272,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -6110,8 +6110,8 @@
    "lat": 38.52,
    "lon": -100.54,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -6231,35 +6231,35 @@
    "lat": 39.212,
    "lon": -94.993,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -6272,17 +6272,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -6303,23 +6303,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -6332,7 +6332,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -6347,34 +6347,34 @@
    "lon": -98.16,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -6387,17 +6387,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -6425,23 +6425,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -6451,17 +6451,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -6476,34 +6476,34 @@
    "lon": -94.854,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -6516,17 +6516,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -6547,23 +6547,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -6576,7 +6576,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -6590,8 +6590,8 @@
    "lat": 39.084,
    "lon": -101.038,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -6712,34 +6712,34 @@
    "lon": -96.115,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -6752,17 +6752,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -6783,23 +6783,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -6812,7 +6812,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -6826,35 +6826,35 @@
    "lat": 38.38,
    "lon": -97.104,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -6867,17 +6867,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -6905,23 +6905,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -6931,17 +6931,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -6955,35 +6955,35 @@
    "lat": 39.825,
    "lon": -96.521,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -6996,17 +6996,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7027,23 +7027,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -7056,7 +7056,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -7070,35 +7070,35 @@
    "lat": 38.405,
    "lon": -97.642,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -7111,17 +7111,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7149,23 +7149,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -7175,17 +7175,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -7199,8 +7199,8 @@
    "lat": 37.302,
    "lon": -100.369,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -7321,34 +7321,34 @@
    "lon": -94.852,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -7361,17 +7361,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7392,23 +7392,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -7421,7 +7421,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -7436,34 +7436,34 @@
    "lon": -98.278,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -7476,17 +7476,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7514,23 +7514,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -7540,17 +7540,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -7564,8 +7564,8 @@
    "lat": 37.155,
    "lon": -95.753,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -7680,34 +7680,34 @@
    "lon": -96.681,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -7720,17 +7720,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7751,23 +7751,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -7780,7 +7780,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -7794,8 +7794,8 @@
    "lat": 37.136,
    "lon": -101.749,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -7915,35 +7915,35 @@
    "lat": 39.795,
    "lon": -95.987,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -7956,17 +7956,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -7987,23 +7987,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -8016,7 +8016,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -8030,8 +8030,8 @@
    "lat": 37.567,
    "lon": -95.309,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -8145,8 +8145,8 @@
    "lat": 38.553,
    "lon": -99.949,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -8266,8 +8266,8 @@
    "lat": 39.769,
    "lon": -99.943,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -8388,34 +8388,34 @@
    "lon": -95.679,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -8428,17 +8428,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -8459,23 +8459,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -8488,7 +8488,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -8503,34 +8503,34 @@
    "lon": -98.773,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -8543,17 +8543,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -8581,23 +8581,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -8607,17 +8607,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -8632,34 +8632,34 @@
    "lon": -97.719,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -8672,17 +8672,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -8710,23 +8710,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -8736,17 +8736,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -8760,35 +8760,35 @@
    "lat": 38.171,
    "lon": -99.318,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -8801,17 +8801,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -8839,23 +8839,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -8865,17 +8865,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -8890,34 +8890,34 @@
    "lon": -99.365,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -8930,17 +8930,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -8968,23 +8968,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -8994,17 +8994,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -9018,35 +9018,35 @@
    "lat": 39.34,
    "lon": -96.286,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -9059,17 +9059,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -9090,23 +9090,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -9119,7 +9119,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -9133,7 +9133,7 @@
    "lat": 37.639,
    "lon": -98.776,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -9262,8 +9262,8 @@
    "lat": 39.836,
    "lon": -101.026,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -9383,7 +9383,7 @@
    "lat": 37.972,
    "lon": -98.056,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -9513,34 +9513,34 @@
    "lon": -97.628,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -9553,17 +9553,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -9591,23 +9591,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -9617,17 +9617,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -9641,35 +9641,35 @@
    "lat": 38.356,
    "lon": -98.258,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -9682,17 +9682,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -9720,23 +9720,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -9746,17 +9746,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -9770,35 +9770,35 @@
    "lat": 39.276,
    "lon": -96.707,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -9811,17 +9811,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -9842,23 +9842,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -9871,7 +9871,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -9886,34 +9886,34 @@
    "lon": -99.366,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -9926,17 +9926,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -9964,23 +9964,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -9990,17 +9990,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -10014,35 +10014,35 @@
    "lat": 38.527,
    "lon": -99.328,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -10055,17 +10055,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -10093,23 +10093,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -10119,17 +10119,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -10143,35 +10143,35 @@
    "lat": 38.974,
    "lon": -98.758,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -10184,17 +10184,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -10222,23 +10222,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -10248,17 +10248,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -10272,35 +10272,35 @@
    "lat": 38.769,
    "lon": -97.636,
    "alert": "normal",
-   "drought_probability_now": 0.06,
-   "rootzone_pct_now": 88.0,
+   "drought_probability_now": 0.11,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.016,
-     "score_dry_year": 0.796,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.846,
      "score_dry_year": 0.743,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.016,
+     "score_dry_year": 0.796,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.739,
      "score_dry_year": 0.583,
@@ -10313,17 +10313,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -10351,23 +10351,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -10377,17 +10377,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -10401,8 +10401,8 @@
    "lat": 38.482,
    "lon": -100.906,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -10522,7 +10522,7 @@
    "lat": 37.694,
    "lon": -97.383,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -10651,8 +10651,8 @@
    "lat": 37.09,
    "lon": -100.856,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -10773,34 +10773,34 @@
    "lon": -95.712,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -10813,17 +10813,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -10844,23 +10844,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -10873,7 +10873,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -10887,8 +10887,8 @@
    "lat": 39.427,
    "lon": -100.501,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -11008,8 +11008,8 @@
    "lat": 39.35,
    "lon": -101.746,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -11130,34 +11130,34 @@
    "lon": -98.844,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -11170,17 +11170,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -11208,23 +11208,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -11234,17 +11234,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -11258,7 +11258,7 @@
    "lat": 38.012,
    "lon": -98.735,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -11387,8 +11387,8 @@
    "lat": 37.557,
    "lon": -101.815,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -11508,8 +11508,8 @@
    "lat": 37.243,
    "lon": -101.289,
    "alert": "normal",
-   "drought_probability_now": 0.07,
-   "rootzone_pct_now": 89.0,
+   "drought_probability_now": 0.13,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -11629,7 +11629,7 @@
    "lat": 37.271,
    "lon": -97.478,
    "alert": "warning",
-   "drought_probability_now": 0.61,
+   "drought_probability_now": 0.59,
    "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
@@ -11758,8 +11758,8 @@
    "lat": 39.398,
    "lon": -101.054,
    "alert": "normal",
-   "drought_probability_now": 0.04,
-   "rootzone_pct_now": 100.0,
+   "drought_probability_now": 0.09,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -11879,8 +11879,8 @@
    "lat": 39.007,
    "lon": -99.899,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -12001,34 +12001,34 @@
    "lon": -96.185,
    "alert": "normal",
    "drought_probability_now": 0.07,
-   "rootzone_pct_now": 62.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 41,
-     "crops_per_year": 1.5,
-     "score_normal": 1.265,
-     "score_dry_year": 1.137,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 30,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.937,
      "score_dry_year": 0.949,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.265,
+     "score_dry_year": 1.137,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.883,
      "score_dry_year": 0.848,
@@ -12041,17 +12041,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -12072,23 +12072,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 41,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 30,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -12101,7 +12101,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -12115,8 +12115,8 @@
    "lat": 38.875,
    "lon": -101.756,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -12237,34 +12237,34 @@
    "lon": -97.094,
    "alert": "normal",
    "drought_probability_now": 0.02,
-   "rootzone_pct_now": 100.0,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 39,
-     "crops_per_year": 1.5,
-     "score_normal": 1.018,
-     "score_dry_year": 0.798,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 33,
+     "weight_pct": 35,
      "crops_per_year": 1.0,
      "score_normal": 0.859,
      "score_dry_year": 0.724,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 35,
+     "crops_per_year": 1.5,
+     "score_normal": 1.018,
+     "score_dry_year": 0.798,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 28,
+     "weight_pct": 30,
      "crops_per_year": 1.0,
      "score_normal": 0.744,
      "score_dry_year": 0.575,
@@ -12277,17 +12277,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 58,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 42,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -12315,23 +12315,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 39,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 35,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 33,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 35,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 28,
+       "weight_pct": 30,
        "note": null
       }
      ]
@@ -12341,17 +12341,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 63,
+       "code": "W-S-F",
+       "name": "wheat-sorghum-fallow",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "W-S-F",
-       "name": "wheat-sorghum-fallow",
-       "weight_pct": 37,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }
@@ -12365,8 +12365,8 @@
    "lat": 38.493,
    "lon": -101.286,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 99.0,
+   "drought_probability_now": 0.06,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
@@ -12486,8 +12486,8 @@
    "lat": 37.566,
    "lon": -95.696,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -12601,8 +12601,8 @@
    "lat": 37.891,
    "lon": -95.688,
    "alert": "watch",
-   "drought_probability_now": 0.3,
-   "rootzone_pct_now": 51.0,
+   "drought_probability_now": 0.32,
+   "rootzone_pct_now": null,
    "basis": "dry-year water (district on watch/warning)",
    "rotations": [
     {
@@ -12716,35 +12716,35 @@
    "lat": 39.101,
    "lon": -94.708,
    "alert": "normal",
-   "drought_probability_now": 0.03,
-   "rootzone_pct_now": 80.0,
+   "drought_probability_now": 0.04,
+   "rootzone_pct_now": null,
    "basis": "normal-year water",
    "rotations": [
     {
      "rank": 1,
-     "code": "C-W-dSb",
-     "name": "corn/wheat/double-crop soy",
-     "weight_pct": 40,
-     "crops_per_year": 1.5,
-     "score_normal": 1.237,
-     "score_dry_year": 1.056,
-     "note": null
-    },
-    {
-     "rank": 2,
      "code": "S-Sb",
      "name": "sorghum-soybean",
-     "weight_pct": 31,
+     "weight_pct": 34,
      "crops_per_year": 1.0,
      "score_normal": 0.938,
      "score_dry_year": 0.905,
      "note": null
     },
     {
+     "rank": 2,
+     "code": "C-W-dSb",
+     "name": "corn/wheat/double-crop soy",
+     "weight_pct": 34,
+     "crops_per_year": 1.5,
+     "score_normal": 1.237,
+     "score_dry_year": 1.056,
+     "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
+    },
+    {
      "rank": 3,
      "code": "C-Sb",
      "name": "corn-soybean",
-     "weight_pct": 29,
+     "weight_pct": 32,
      "crops_per_year": 1.0,
      "score_normal": 0.874,
      "score_dry_year": 0.788,
@@ -12757,17 +12757,17 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 59,
+       "code": "C-Sb",
+       "name": "corn-soybean",
+       "weight_pct": 50,
        "note": null
       },
       {
        "rank": 2,
-       "code": "C-Sb",
-       "name": "corn-soybean",
-       "weight_pct": 41,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 50,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     },
@@ -12788,23 +12788,23 @@
      "rotations": [
       {
        "rank": 1,
-       "code": "C-W-dSb",
-       "name": "corn/wheat/double-crop soy",
-       "weight_pct": 40,
+       "code": "S-Sb",
+       "name": "sorghum-soybean",
+       "weight_pct": 34,
        "note": null
       },
       {
        "rank": 2,
-       "code": "S-Sb",
-       "name": "sorghum-soybean",
-       "weight_pct": 31,
-       "note": null
+       "code": "C-W-dSb",
+       "name": "corn/wheat/double-crop soy",
+       "weight_pct": 34,
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       },
       {
        "rank": 3,
        "code": "C-Sb",
        "name": "corn-soybean",
-       "weight_pct": 29,
+       "weight_pct": 32,
        "note": null
       }
      ]
@@ -12817,7 +12817,7 @@
        "code": "C-W-dSb",
        "name": "corn/wheat/double-crop soy",
        "weight_pct": 100,
-       "note": null
+       "note": "double-crop moved down: soil not above normal or drought alert on (K-State MF2908)"
       }
      ]
     }

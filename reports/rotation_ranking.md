@@ -4,15 +4,15 @@ Score = weather-adjusted crops per year: average season score x crops per year, 
 
 | district | alert now | root-zone soil now (pct) | basis | 1st (weight) | 2nd (weight) | 3rd (weight) |
 |---|---|---|---|---|---|---|
-| central | normal (6%) | 88 | normal year | C-W-dSb 39% | S-Sb 33% | C-Sb 28% |
-| east_central | normal (7%) | 62 | normal year | C-W-dSb 41% | S-Sb 30% | C-Sb 29% |
-| north_central | normal (2%) | 100 | normal year | C-W-dSb 39% | S-Sb 33% | C-Sb 28% |
-| northeast | normal (3%) | 80 | normal year | C-W-dSb 40% | S-Sb 31% | C-Sb 29% |
-| northwest | normal (4%) | 100 | normal year | W-S-F 38% | W-C-F 31% | W-F 31% |
-| south_central | warning (61%) | flagged | dry year | S-Sb 35% | C-W-dSb 35%* | C-Sb 30% |
-| southeast | watch (30%) | 51 | dry year | S-Sb 34% | C-W-dSb 34%* | C-Sb 32% |
-| southwest | normal (7%) | 89 | normal year | W-S-F 38% | W-F 31% | W-C-F 31% |
-| west_central | normal (3%) | 99 | normal year | W-S-F 38% | W-F 31% | W-C-F 31% |
+| central | normal (11%) | flagged | normal year | S-Sb 35% | C-W-dSb 35%* | C-Sb 30% |
+| east_central | normal (7%) | flagged | normal year | S-Sb 34% | C-W-dSb 34%* | C-Sb 32% |
+| north_central | normal (2%) | flagged | normal year | S-Sb 35% | C-W-dSb 35%* | C-Sb 30% |
+| northeast | normal (4%) | flagged | normal year | S-Sb 34% | C-W-dSb 34%* | C-Sb 32% |
+| northwest | normal (9%) | flagged | normal year | W-S-F 38% | W-C-F 31% | W-F 31% |
+| south_central | warning (59%) | flagged | dry year | S-Sb 35% | C-W-dSb 35%* | C-Sb 30% |
+| southeast | watch (32%) | flagged | dry year | S-Sb 34% | C-W-dSb 34%* | C-Sb 32% |
+| southwest | normal (13%) | flagged | normal year | W-S-F 38% | W-F 31% | W-C-F 31% |
+| west_central | normal (6%) | flagged | normal year | W-S-F 38% | W-F 31% | W-C-F 31% |
 
 Weights: the 3 suggested rotations share 100%, in proportion to their water-adjusted score (normal-year score, or dry-year score when the district is on watch/warning).
 * Double-crop rotation moved below the 2-year rotations because soil is not above normal or a drought alert is on (K-State MF2908 moisture guidance); its weight uses the reduced score.

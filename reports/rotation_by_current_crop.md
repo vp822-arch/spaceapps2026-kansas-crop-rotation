@@ -4,22 +4,22 @@ Only rotations containing the farmer's current crop are shown (double-crop soybe
 
 | district | current crop | suggestions (weight) |
 |---|---|---|
-| central | corn | C-W-dSb 58%, C-Sb 42% |
+| central | corn | C-Sb 50%, C-W-dSb 50%* |
 | central | sorghum | S-Sb 58%, W-S-F 42% |
-| central | soybean | C-W-dSb 39%, S-Sb 33%, C-Sb 28% |
-| central | wheat | C-W-dSb 63%, W-S-F 37% |
-| east_central | corn | C-W-dSb 59%, C-Sb 41% |
+| central | soybean | S-Sb 35%, C-W-dSb 35%*, C-Sb 30% |
+| central | wheat | W-S-F 50%, C-W-dSb 50%* |
+| east_central | corn | C-Sb 50%, C-W-dSb 50%* |
 | east_central | sorghum | S-Sb 100% |
-| east_central | soybean | C-W-dSb 41%, S-Sb 30%, C-Sb 29% |
-| east_central | wheat | C-W-dSb 100% |
-| north_central | corn | C-W-dSb 58%, C-Sb 42% |
+| east_central | soybean | S-Sb 34%, C-W-dSb 34%*, C-Sb 32% |
+| east_central | wheat | C-W-dSb 100%* |
+| north_central | corn | C-Sb 50%, C-W-dSb 50%* |
 | north_central | sorghum | S-Sb 59%, W-S-F 41% |
-| north_central | soybean | C-W-dSb 39%, S-Sb 33%, C-Sb 28% |
-| north_central | wheat | C-W-dSb 63%, W-S-F 37% |
-| northeast | corn | C-W-dSb 59%, C-Sb 41% |
+| north_central | soybean | S-Sb 35%, C-W-dSb 35%*, C-Sb 30% |
+| north_central | wheat | W-S-F 50%, C-W-dSb 50%* |
+| northeast | corn | C-Sb 50%, C-W-dSb 50%* |
 | northeast | sorghum | S-Sb 100% |
-| northeast | soybean | C-W-dSb 40%, S-Sb 31%, C-Sb 29% |
-| northeast | wheat | C-W-dSb 100% |
+| northeast | soybean | S-Sb 34%, C-W-dSb 34%*, C-Sb 32% |
+| northeast | wheat | C-W-dSb 100%* |
 | northwest | corn | W-C-F 51%, W-C-S-F 49% |
 | northwest | sorghum | W-S-F 40%, W-C-S-F 32%, S-S 28% |
 | northwest | soybean | none - No K-State dryland rotation for western Kansas includes soybeans. |
