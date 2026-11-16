@@ -629,3 +629,8 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - The same token-prefix redaction, credentials wording and AI-rule correction were applied to this repo's ai-record/. The old text remains in git history.
 - Link check: 8 JPL/Earthdata pages cited in the logs loaded for Claude; the logs now carry a note that old links may have moved.
 - Not done by Claude (Varun's to do): confirm privately to the reviewer that the pasted Earthdata token was revoked and the password changed.
+
+## 84. Double-check of the review fixes (Nov 15, ~22:00–22:20 ET)
+- Varun asked for a double-check. Claude re-read both PRs as GitHub shows them and scanned PR #87 again for tokens, emails, phone numbers, device details, identifiers and route details: none left.
+- One flaw found and fixed in PR #87's AI use statement: it had listed crop season dates and the corn/sorghum/wheat heat thresholds as Claude's assumptions, but the script headers cite USDA NASS Handbook 628 and K-State for them. The sourced / assumed / fitted lists now match the script headers. The validation limits were also reworded to say exactly what the report says.
+- Verified: both PRs target next and merge cleanly; relative links resolve; entry numbers cited (30, 42, 23, 33) are right; Field Watch and Second Opinion behaviour on next matches the snapshot note; the publishing runs were started from Varun's GitHub account.
