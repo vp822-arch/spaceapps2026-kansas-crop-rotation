@@ -621,3 +621,11 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 
 ## 82. Final PM check-in (Nov 15, 20:15 ET)
 - No new GitHub Actions run; team repo main unchanged since 11:45; PRs #81 and #87 still open; no AI disclosure on the team repo's main. Final status sent; Varun submits the Space Apps form himself (target 21:00, deadline 23:59). No further check-ins scheduled.
+
+## 83. Review fixes for team PRs #81 and #87 (Nov 15, ~21:55–22:30 ET)
+- Varun pasted a teammate's review of both PRs. Claude verified each point against the code, then pushed docs-only fixes and retargeted both PRs from main to next (both merge cleanly).
+- PR #81: renamed to "bundled reference snapshot"; stated that Second Opinion uses the bundled JSON as a labelled fallback; separated the JSON generation time (2026-11-14 23:45 UTC), POWER cutoff (2026-11-09) and drought-data date (2026-11-10); said to show the date of whichever file was served.
+- PR #87: rewrote the AI use statement (scope limited to kansas-crop-rotation/, validation described as exploratory, sourced values vs modelling assumptions, exact model names, what Varun checked, the two credential exposures acknowledged without values); added corrections (AI-content rule; drought target is an unweighted mean of county D1+ percentages in approximate districts); labelled the logs historical; fixed sibling links; removed device details, a database service identifier, a travel itinerary and a filename containing a token's first characters.
+- The same token-prefix redaction, credentials wording and AI-rule correction were applied to this repo's ai-record/. The old text remains in git history.
+- Link check: 8 JPL/Earthdata pages cited in the logs loaded for Claude; the logs now carry a note that old links may have moved.
+- Not done by Claude (Varun's to do): confirm privately to the reviewer that the pasted Earthdata token was revoked and the password changed.

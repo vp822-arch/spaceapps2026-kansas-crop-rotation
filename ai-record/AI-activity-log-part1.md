@@ -266,6 +266,7 @@ All times are US Eastern, Saturday Nov 14, 2026. Newest entries go at the bottom
 - Claude ran two web searches (Space Apps 2026 AI rules; NASA IMERG precipitation) and fetched the 2026 Space Apps Participant Terms page.
 - Findings from sources:
   - Space Apps 2026 Participant Terms (updated Aug 7, 2026): no mention of AI or generative AI. They do require citing every source used, OSI-approved open licenses for non-NASA data/code with licenses listed in the submission, and say NASA may remove uncited material or revoke awards. This resolves the open item about AI rules: no AI-specific rule found; citing and this log cover the general citation rule.
+  - **Correction (added Nov 15, 2026):** this was incomplete; it was based only on the Participant Terms page. Space Apps does have AI-specific requirements: AI-generated code and data must be acknowledged in descriptive text and metadata, and AI-generated images and video need a visible watermark (see the team repo's docs/SUBMISSION.md).
   - IMERG Early Run: global, 0.1° (about 10 km), minimum latency 4 hours, records from 1998 per GPM's page (another NASA catalog page says from 2000; minor conflict noted). Daily Early product (GPM_3IMERGDE) exists.
   - SPEI classes from a published table: SPEI ≤ −1 is moderately dry, ≤ −1.5 severely dry, ≤ −2 extremely dry.
 - Plan given (Claude's own design and engineering advice unless sourced above):
@@ -350,7 +351,7 @@ All times are US Eastern, Saturday Nov 14, 2026. Newest entries go at the bottom
 
 ### 31. 13:23–13:58 — Token file, region decisions, and the first data pipeline (download, clean, normals, check chart)
 - 13:23: Varun asked how to save the token. Claude gave Notepad steps for saving a new token to C:\SpaceApps2026\.edl_token.
-- 13:49: Varun asked Claude to check the file. Claude listed the folder: Notepad had saved it as "eyJ0eXAiOiJKV1QiLCJvcmlnaW4iOiJFYXJ.txt" (the file name was the token's first characters, which are the standard header shared by all Earthdata tokens and not secret). Claude renamed it to .edl_token without opening it, and checked only its shape (1 line, 712 characters, 2 dots, as a token should have).
+- 13:49: Varun asked Claude to check the file. Claude listed the folder: Notepad had saved it under a filename made of the token's first characters ([filename redacted]). Claude renamed it to .edl_token without opening it, and checked only its shape (1 line, 712 characters, 2 dots, as a token should have).
 - Team decisions (Varun): option B (Claude writes scripts, Varun runs downloads) plus option A if possible; 13:50 US-first; 13:50 Illinois; 13:51 changed to Kansas. Varun noted his role is data analytics.
 - Network re-checked at 13:50 from the laptop's sandboxed shell: NASA POWER, CMR, AppEEARS, Harmony and Earthdata Login all still refused. So Varun runs download scripts; Claude does the analysis on files in the folder.
 - Varun offered computer use; Claude declined because computer use cannot type into terminals, so it could not run commands.
