@@ -640,3 +640,9 @@ Continues `claude/ai-activity-log.md` (entries 1–32). Same purpose: a record o
 - Bug test of jzeng151/soilsense `next` at 73f65f8, at the team lead's request: typecheck passed, 955 tests passed (15 skipped), build passed, no dependency advisories. Ran the app locally in offline mode and probed 44 API requests with valid and invalid input: no crashes or 500s; bad input gave clear 400s. Second Opinion's bundled fallback worked and was labelled. All rotation codes and crop keys in Varun's file are understood by the app.
 - Limits: the test sandbox cannot reach NASA/USDA, so live-data paths were checked only through the automated tests; no browser/visual test; the deployed site was not tested (URL not known).
 - One issue found and fixed in PR #127 (to next): GET /api/logs was public when the ADMIN_TOKEN secret was unset; it now always requires the token. 3-line change plus a test; 958 tests pass.
+
+## 86. Live-site test of the team app (Nov 15, ~23:30–23:45 ET)
+- Jason judged the /api/logs finding unimportant and asked for another check. Claude found the deployed URL in the repo and tested it through Varun's browser with live data.
+- Live results: /api/logs returns 401 (the admin token is set there, so the log was not exposed; PR #127 is only a safety net). 16 GET routes and 7 plan requests (Kansas and Iowa; rain/limited/full water; all priorities; English and Spanish; with recent crops) all returned 200 with three plans each, scores between 0 and 1, and no NaN/undefined values. Second Opinion served the live R2 file (not the saved copy). The home page loaded.
+- Two slow cold starts, not errors: a plan for a point not yet cached took about 24 s, and the first vegetation (MODIS) request did not answer within 40 s, then answered in under 0.1 s once cached.
+- Not tested: the Sprout chat, phone line, sign-in, Field Watch agent actions, and visual layout. Which commit the live site runs was not verified.
